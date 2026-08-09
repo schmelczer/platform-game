@@ -1,0 +1,29 @@
+#ifndef FLOATERS_H_INCLUDED
+#define FLOATERS_H_INCLUDED
+
+    #include "global.h"
+    #include "map.h"
+    #include "player.h"
+    #include "camera.h"
+    #i
+
+    typedef enum floaterType {
+        enemy, projectile
+    } floaterType;
+
+    typedef struct floater {
+        floaterType type;
+        vector2D position;
+        vector2D velocity;
+        float slownessDebuffLeft;
+        float size;
+        struct floater* next;
+    } floater;
+
+    void freeFloaterList();
+    void createEnemy();
+    void createProjectile(vector3D playerPosition, vector3D playerSize, vector2D* playerVelocity, mousePos mouse);
+    void moveFloaters(int deltaTime);
+    void getFloatersRenderObject(int x, int y, renderObject* renderMap, int renderObjectsPerCube);
+
+#endif // FLOATERS_H_INCLUDED

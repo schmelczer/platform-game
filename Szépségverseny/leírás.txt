@@ -1,0 +1,4 @@
+Schmelczer András, Platform játék
+
+Rombolható, véletlenszerûen generált pálya, egyre nehezebb, mégis élvezetes játékélmény, és természetesen, hiteles 3D grafika. Ezeket szerettem volna megvalósítani a programomban.
+A játék célja a kis kék kockák gyûjtése és az ellenségekkel való érintkezés elkerülése. Az ellenségek (repülõ piros kockák) és a karakterünk (piros téglatest a képernyõ közepén) is rombolhatják a játékteret. Ettõl igen látványos barlangrendszerek jöhetnek létre egy-egy nagyobb összecsapás után.

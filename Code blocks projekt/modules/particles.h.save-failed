@@ -1,0 +1,21 @@
+#include "global.h"
+
+
+#ifndef PARTICLES_H_INCLUDED
+#define PARTICLES_H_INCLUDED
+
+
+typedef struct particle {
+    //y, z
+    vector2D position;
+    //mert kockák
+    float size;
+    float velocity;
+} particle;
+
+void createParticleList();
+void freeParticles();
+
+void drawProjectiles(int deltaTime);
+
+#endif // PARTICLES_H_INCLUDED

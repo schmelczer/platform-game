@@ -1,0 +1,2840 @@
+# depslib dependency file v1.0
+1467635900 source:c:\users\schmelczer andrás\desktop\3d\main.c
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<math.h>
+
+1350222388 c:\program files (x86)\codeblocks\mingw\include\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222394 c:\program files (x86)\codeblocks\mingw\include\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222396 c:\program files (x86)\codeblocks\mingw\include\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1350222390 c:\program files (x86)\codeblocks\mingw\include\sdl_config.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1350222396 c:\program files (x86)\codeblocks\mingw\include\sdl_platform.h
+
+1341006780 c:\program files (x86)\codeblocks\mingw\include\sys\types.h
+	<_mingw.h>
+	<stddef.h>
+
+1341006770 c:\program files (x86)\codeblocks\mingw\include\_mingw.h
+
+1341006776 c:\program files (x86)\codeblocks\mingw\include\stdio.h
+	<_mingw.h>
+	<stddef.h>
+	<stdarg.h>
+	<sys/types.h>
+
+1341006776 c:\program files (x86)\codeblocks\mingw\include\stdlib.h
+	<_mingw.h>
+	<stddef.h>
+
+1341006774 c:\program files (x86)\codeblocks\mingw\include\malloc.h
+	<_mingw.h>
+	<stdlib.h>
+
+1341006774 c:\program files (x86)\codeblocks\mingw\include\memory.h
+	<string.h>
+
+1341006776 c:\program files (x86)\codeblocks\mingw\include\string.h
+	<_mingw.h>
+	<stddef.h>
+
+1341006776 c:\program files (x86)\codeblocks\mingw\include\strings.h
+	<string.h>
+
+1341006772 c:\program files (x86)\codeblocks\mingw\include\inttypes.h
+	<_mingw.h>
+	<stdint.h>
+	<stddef.h>
+
+1341006776 c:\program files (x86)\codeblocks\mingw\include\stdint.h
+	<stddef.h>
+
+1341006770 c:\program files (x86)\codeblocks\mingw\include\ctype.h
+	<_mingw.h>
+	<stddef.h>
+
+1350222388 c:\program files (x86)\codeblocks\mingw\include\begin_code.h
+
+1350222388 c:\program files (x86)\codeblocks\mingw\include\close_code.h
+
+1350222390 c:\program files (x86)\codeblocks\mingw\include\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222392 c:\program files (x86)\codeblocks\mingw\include\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222392 c:\program files (x86)\codeblocks\mingw\include\sdl_endian.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222394 c:\program files (x86)\codeblocks\mingw\include\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222396 c:\program files (x86)\codeblocks\mingw\include\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1341006774 c:\program files (x86)\codeblocks\mingw\include\process.h
+	<_mingw.h>
+	<sys/types.h>
+	<stdint.h>
+
+1350222396 c:\program files (x86)\codeblocks\mingw\include\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222390 c:\program files (x86)\codeblocks\mingw\include\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222392 c:\program files (x86)\codeblocks\mingw\include\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222392 c:\program files (x86)\codeblocks\mingw\include\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222388 c:\program files (x86)\codeblocks\mingw\include\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222394 c:\program files (x86)\codeblocks\mingw\include\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222394 c:\program files (x86)\codeblocks\mingw\include\sdl_keysym.h
+
+1350222394 c:\program files (x86)\codeblocks\mingw\include\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222398 c:\program files (x86)\codeblocks\mingw\include\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222392 c:\program files (x86)\codeblocks\mingw\include\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222396 c:\program files (x86)\codeblocks\mingw\include\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1350222394 c:\program files (x86)\codeblocks\mingw\include\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222398 c:\program files (x86)\codeblocks\mingw\include\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1350222398 c:\program files (x86)\codeblocks\mingw\include\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1336974206 c:\program files (x86)\codeblocks\mingw\include\sdl_gfxprimitives.h
+	<math.h>
+	"SDL.h"
+
+1341006774 c:\program files (x86)\codeblocks\mingw\include\math.h
+	<_mingw.h>
+
+1507886471 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\3d\main.c
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<math.h>
+
+1508604868 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c3d\main.c
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<math.h>
+	<time.h>
+	"modules/c3d.h"
+
+1508593545 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c3d\camera.c
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	"c3d.h"
+
+1508593293 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c3d\camera.h
+	"structures.h"
+	"SDL.h"
+
+1508591239 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c3d\structures.h
+	<stdbool.h>
+
+1508592637 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c3d\player.h
+	"structures.h"
+	"camera.h"
+
+1508593543 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c3d\player.c
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	"c3d.h"
+
+1508593545 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c3d\map.c
+	<math.h>
+	<stdlib.h>
+	<SDL.h>
+	"c3d.h"
+
+1341006776 c:\program files (x86)\codeblocks\mingw\include\time.h
+	<_mingw.h>
+	<stddef.h>
+
+1508592467 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c3d\map.h
+	"structures.h"
+	<stdbool.h>
+
+1508593545 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c3d\c3d.h
+	<stdbool.h>
+	<SDL.h>
+
+1508604868 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c3d\modules\camera.c
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	"c3d.h"
+
+1508604868 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c3d\modules\c3d.h
+	<stdbool.h>
+	<SDL.h>
+
+1508604868 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c3d\modules\map.c
+	<math.h>
+	<stdlib.h>
+	<SDL.h>
+	"c3d.h"
+
+1508604868 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c3d\modules\player.c
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	"c3d.h"
+
+1508604605 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c3d\modules\particles.c
+	"c3d.h"
+
+1508664334 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.22\modules\camera.c
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	"c3d.h"
+
+1508706080 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.22\modules\c3d.h
+	<stdbool.h>
+	<SDL.h>
+
+1508707843 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.22\modules\map.c
+	<math.h>
+	<stdlib.h>
+	<SDL.h>
+	"c3d.h"
+
+1508707741 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.22\modules\particles.c
+	"c3d.h"
+
+1508707293 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.22\modules\player.c
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	"c3d.h"
+
+1508707766 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.22\main.c
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<math.h>
+	<time.h>
+	"modules/c3d.h"
+
+1508665116 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.22\modules\color.c
+	"c3d.h"
+
+1508792887 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.23\main.c
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<math.h>
+	<time.h>
+	"modules/c3d.h"
+
+1508799897 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.23\modules\c3d.h
+	<stdbool.h>
+	<SDL.h>
+
+1508799426 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.23\modules\camera.c
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	"c3d.h"
+
+1508770203 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.23\modules\color.c
+	"c3d.h"
+
+1508799897 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.23\modules\map.c
+	<math.h>
+	<stdlib.h>
+	<SDL.h>
+	"c3d.h"
+
+1508790395 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.23\modules\particles.c
+	"c3d.h"
+
+1508707293 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.23\modules\player.c
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	"c3d.h"
+
+1508927686 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.24\modules\camera.c
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	"c3d.h"
+
+1508927686 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.24\modules\c3d.h
+	<stdbool.h>
+	<SDL.h>
+
+1508800158 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.24\modules\color.c
+	"c3d.h"
+
+1508927447 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.24\modules\map.c
+	<math.h>
+	<stdlib.h>
+	<SDL.h>
+	"c3d.h"
+
+1508790395 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.24\modules\particles.c
+	"c3d.h"
+
+1508707293 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.24\modules\player.c
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	"c3d.h"
+
+1508927264 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.24\main.c
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<math.h>
+	<time.h>
+	"modules/c3d.h"
+
+1509045690 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.24 másolata\main.c
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<math.h>
+	<time.h>
+	"modules/c3d.h"
+
+1509045638 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.24 másolata\modules\c3d.h
+	<stdbool.h>
+	<SDL.h>
+
+1508927686 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.24 másolata\modules\camera.c
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	"c3d.h"
+
+1508800158 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.24 másolata\modules\color.c
+	"c3d.h"
+
+1509045673 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.24 másolata\modules\map.c
+	<math.h>
+	<stdlib.h>
+	<SDL.h>
+	"c3d.h"
+
+1508790395 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.24 másolata\modules\particles.c
+	"c3d.h"
+
+1509049160 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.24 másolata\modules\player.c
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	"c3d.h"
+
+1509112555 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.27\main.c
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<math.h>
+	<time.h>
+	"modules/c3d.h"
+
+1509045638 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.27\modules\c3d.h
+	<stdbool.h>
+	<SDL.h>
+
+1508927686 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.27\modules\camera.c
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	"c3d.h"
+
+1508800158 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.27\modules\color.c
+	"c3d.h"
+
+1509112412 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.27\modules\particles.c
+	"c3d.h"
+
+1509049160 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.27\modules\player.c
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	"c3d.h"
+
+1509112461 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.27\modules\map.c
+	<math.h>
+	<stdlib.h>
+	<SDL.h>
+	"c3d.h"
+
+1509227941 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.28\modules\camera.c
+	"c3d.h"
+
+1509231661 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.28\modules\c3d.h
+	<stdbool.h>
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+
+1509229688 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.28\modules\color.c
+	"c3d.h"
+
+1509230830 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.28\modules\map.c
+	<stdlib.h>
+	"c3d.h"
+
+1509231661 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.28\modules\particles.c
+	"c3d.h"
+
+1509229909 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.28\modules\player.c
+	"c3d.h"
+
+1509231661 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.28\main.c
+	<SDL.h>
+	<time.h>
+	"modules/c3d.h"
+
+1336977806 c:\program files (x86)\codeblocks\mingw\include\sdl_framerate.h
+	"SDL.h"
+
+1509229909 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.28\modules\projectile.c
+	"c3d.h"
+
+1509229351 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.28\modules\auxfunctions.c
+	"c3d.h"
+
+1509297873 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29\main.c
+	<SDL.h>
+	<time.h>
+	"modules/c3d.h"
+
+1509282324 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29\modules\c3d.h
+	<stdbool.h>
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+
+1509276916 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29\modules\auxiliary\auxfunctions.c
+	"../c3d.h"
+
+1509282398 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29\modules\auxiliary\auxsdl.c
+	"../c3d.h"
+
+1509282548 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29\modules\camera.c
+	"c3d.h"
+
+1509288543 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29\modules\color.c
+	"c3d.h"
+
+1509282596 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29\modules\map.c
+	<stdlib.h>
+	"c3d.h"
+
+1509228061 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29\modules\particles.c
+	"c3d.h"
+
+1509296294 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29\modules\player.c
+	"c3d.h"
+
+1509226309 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29\modules\projectile.c
+	"c3d.h"
+
+1509308596 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 másolata\main.c
+	<time.h>
+	"modules/c3d.h"
+
+1509308424 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 másolata\modules\c3d.h
+	<stdbool.h>
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<SDL_ttf.h>
+
+1509276916 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 másolata\modules\auxiliary\auxfunctions.c
+	"../c3d.h"
+
+1509307359 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 másolata\modules\auxiliary\auxsdl.c
+	"../c3d.h"
+
+1509304254 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 másolata\modules\camera.c
+	"c3d.h"
+
+1509288543 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 másolata\modules\color.c
+	"c3d.h"
+
+1509304480 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 másolata\modules\map.c
+	<stdlib.h>
+	"c3d.h"
+
+1509228061 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 másolata\modules\particles.c
+	"c3d.h"
+
+1509308424 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 másolata\modules\player.c
+	"c3d.h"
+
+1509308013 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 másolata\modules\projectile.c
+	"c3d.h"
+
+1325793180 c:\program files (x86)\codeblocks\mingw\include\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1509308596 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 este\main.c
+	<time.h>
+	"modules/c3d.h"
+
+1509308424 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 este\modules\c3d.h
+	<stdbool.h>
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<SDL_ttf.h>
+
+1509276916 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 este\modules\auxiliary\auxfunctions.c
+	"../c3d.h"
+
+1509307359 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 este\modules\auxiliary\auxsdl.c
+	"../c3d.h"
+
+1509304254 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 este\modules\camera.c
+	"c3d.h"
+
+1509288543 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 este\modules\color.c
+	"c3d.h"
+
+1509304480 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 este\modules\map.c
+	<stdlib.h>
+	"c3d.h"
+
+1509228061 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 este\modules\particles.c
+	"c3d.h"
+
+1509308424 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 este\modules\player.c
+	"c3d.h"
+
+1509308013 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.29 este\modules\projectile.c
+	"c3d.h"
+
+1509439327 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30\main.c
+	<time.h>
+	"modules/c3d.h"
+
+1509439296 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30\modules\c3d.h
+	<stdbool.h>
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<SDL_ttf.h>
+
+1509276916 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30\modules\auxiliary\auxfunctions.c
+	"../c3d.h"
+
+1509394520 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30\modules\auxiliary\auxsdl.c
+	"../c3d.h"
+
+1509392184 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30\modules\camera.c
+	"c3d.h"
+
+1509392088 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30\modules\color.c
+	"c3d.h"
+
+1509304480 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30\modules\map.c
+	<stdlib.h>
+	"c3d.h"
+
+1509439296 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30\modules\particles.c
+	"c3d.h"
+
+1509308424 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30\modules\player.c
+	"c3d.h"
+
+1509534745 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30\modules\projectile.c
+	"c3d.h"
+
+1509379160 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30\modules\enemy.c
+	"c3d.h"
+
+1509657353 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30 másolata\main.c
+	<time.h>
+	"modules/c3d.h"
+
+1509657650 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30 másolata\modules\c3d.h
+	<stdbool.h>
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<SDL_ttf.h>
+
+1509276916 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30 másolata\modules\auxiliary\auxfunctions.c
+	"../c3d.h"
+
+1509656885 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30 másolata\modules\auxiliary\auxsdl.c
+	"../c3d.h"
+
+1509657352 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30 másolata\modules\camera.c
+	"c3d.h"
+
+1509651126 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30 másolata\modules\color.c
+	"c3d.h"
+
+1509656867 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30 másolata\modules\enemy.c
+	"c3d.h"
+
+1509651178 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30 másolata\modules\map.c
+	<stdlib.h>
+	"c3d.h"
+
+1509657516 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30 másolata\modules\particles.c
+	"c3d.h"
+
+1509657002 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30 másolata\modules\player.c
+	"c3d.h"
+
+1509653949 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30 másolata\modules\projectile.c
+	"c3d.h"
+
+1509657183 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 10.30 másolata\modules\auxiliary\mouse.c
+	"../c3d.h"
+
+1509658185 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.02\main.c
+	<time.h>
+	"modules/c3d.h"
+
+1509705412 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.02\modules\c3d.h
+	<stdbool.h>
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<SDL_ttf.h>
+
+1509276916 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.02\modules\auxiliary\auxfunctions.c
+	"../c3d.h"
+
+1509656885 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.02\modules\auxiliary\auxsdl.c
+	"../c3d.h"
+
+1509657183 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.02\modules\auxiliary\mouse.c
+	"../c3d.h"
+
+1509707109 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.02\modules\camera.c
+	"c3d.h"
+
+1509651126 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.02\modules\color.c
+	"c3d.h"
+
+1509707068 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.02\modules\enemy.c
+	"c3d.h"
+
+1509704092 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.02\modules\map.c
+	<stdlib.h>
+	"c3d.h"
+
+1509657516 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.02\modules\particles.c
+	"c3d.h"
+
+1509657850 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.02\modules\player.c
+	"c3d.h"
+
+1509705412 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.02\modules\projectile.c
+	"c3d.h"
+
+1509722352 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.03\main.c
+	<time.h>
+	"modules/c3d.h"
+
+1509705412 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.03\modules\c3d.h
+	<stdbool.h>
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<SDL_ttf.h>
+
+1509276916 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.03\modules\auxiliary\auxfunctions.c
+	"../c3d.h"
+
+1509657183 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.03\modules\auxiliary\mouse.c
+	"../c3d.h"
+
+1509791253 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.03\modules\camera.c
+	"c3d.h"
+
+1509651126 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.03\modules\color.c
+	"c3d.h"
+
+1509707068 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.03\modules\enemy.c
+	"c3d.h"
+
+1509704092 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.03\modules\map.c
+	<stdlib.h>
+	"c3d.h"
+
+1509722415 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.03\modules\particles.c
+	"c3d.h"
+
+1509657850 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.03\modules\player.c
+	"c3d.h"
+
+1509705412 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.03\modules\projectile.c
+	"c3d.h"
+
+1509721634 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.03\modules\auxiliary\auxsdl.c
+	"../c3d.h"
+
+1509916541 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.04\main.c
+	<time.h>
+	"modules/c3d.h"
+
+1509898690 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.04\modules\c3d.h
+	<stdbool.h>
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<SDL_ttf.h>
+
+1509897596 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.04\modules\auxiliary\auxfunctions.c
+	"../c3d.h"
+
+1509721634 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.04\modules\auxiliary\auxsdl.c
+	"../c3d.h"
+
+1509657183 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.04\modules\auxiliary\mouse.c
+	"../c3d.h"
+
+1509914444 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.04\modules\camera.c
+	"c3d.h"
+
+1509651126 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.04\modules\color.c
+	"c3d.h"
+
+1509914443 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.04\modules\enemy.c
+	"c3d.h"
+
+1509914354 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.04\modules\map.c
+	<stdlib.h>
+	"c3d.h"
+
+1509909451 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.04\modules\particles.c
+	"c3d.h"
+
+1509912539 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.04\modules\player.c
+	"c3d.h"
+
+1509893689 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.04\modules\projectile.c
+	"c3d.h"
+
+1509989008 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.05\main.c
+	<time.h>
+	"modules/c3d.h"
+
+1509898690 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.05\modules\c3d.h
+	<stdbool.h>
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<SDL_ttf.h>
+
+1509897596 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.05\modules\auxiliary\auxfunctions.c
+	"../c3d.h"
+
+1509721634 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.05\modules\auxiliary\auxsdl.c
+	"../c3d.h"
+
+1509657183 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.05\modules\auxiliary\mouse.c
+	"../c3d.h"
+
+1509651126 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.05\modules\color.c
+	"c3d.h"
+
+1509914443 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.05\modules\enemy.c
+	"c3d.h"
+
+1509914354 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.05\modules\map.c
+	<stdlib.h>
+	"c3d.h"
+
+1509966948 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.05\modules\particles.c
+	"c3d.h"
+
+1509963230 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.05\modules\player.c
+	"c3d.h"
+
+1509893689 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.05\modules\projectile.c
+	"c3d.h"
+
+1509963150 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.05\modules\camera.c
+	"c3d.h"
+
+1510068349 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\main.c
+	<time.h>
+	"modules/global.h"
+	"modules/camera.h"
+	"modules/projectiles.h"
+	"modules/enemy.h"
+	"modules/player.h"
+	"modules/particles.h"
+	"modules/map.h"
+	"modules/auxiliary/auxFunctions.h"
+	"modules/auxiliary/auxSDL.h"
+	"modules/auxiliary/mouse.h"
+
+1510054534 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\c3d.h
+	<stdbool.h>
+	<math.h>
+	<SDL.h>
+	<SDL_gfxPrimitives.h>
+	<SDL_ttf.h>
+
+1510057929 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\auxiliary\auxfunctions.c
+	"../global.h"
+	"auxFunctions.h"
+
+1510057889 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\auxiliary\auxsdl.c
+	"../global.h"
+	"auxSDL.h"
+
+1510057843 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\auxiliary\mouse.c
+	"../global.h"
+	"mouse.h"
+
+1510058230 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\camera.c
+	"camera.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1510058080 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\color.c
+	"color.h"
+
+1510058660 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\map.c
+	"map.h"
+	"color.h"
+	"camera.h"
+
+1510058166 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\player.c
+	"player.h"
+	"camera.h"
+
+1510058279 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\projectile.c
+	"projectiles.h"
+	"camera.h"
+	"enemy.h"
+	"map.h"
+
+1510058376 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\enemy.c
+	"enemy.h"
+	"camera.h"
+	"map.h"
+	"player.h"
+
+1510058452 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\particles.c
+	"particles.h"
+	"camera.h"
+
+1510058416 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\global.h
+	<stdbool.h>
+	<stdlib.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_gfxPrimitives.h>
+	"auxiliary/auxFunctions.h"
+
+1510057843 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\camera.h
+	"global.h"
+
+1510058080 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\projectiles.h
+	"global.h"
+
+1510057843 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\enemy.h
+	"global.h"
+
+1510058080 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\player.h
+	"global.h"
+
+1510058079 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\particles.h
+	"global.h"
+
+1510057843 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\auxiliary\auxfunctions.h
+
+1510057843 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\auxiliary\auxsdl.h
+
+1510057843 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\auxiliary\mouse.h
+
+1510057843 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\color.h
+	"global.h"
+
+1510058116 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.06\modules\map.h
+	"global.h"
+
+1510175893 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\main.c
+	<time.h>
+	"modules/global.h"
+	"modules/camera.h"
+	"modules/projectiles.h"
+	"modules/enemy.h"
+	"modules/player.h"
+	"modules/particles.h"
+	"modules/map.h"
+	"modules/auxiliary/auxFunctions.h"
+	"modules/auxiliary/auxSDL.h"
+	"modules/auxiliary/mouse.h"
+
+1510167842 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\global.h
+	<stdbool.h>
+	<stdlib.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_gfxPrimitives.h>
+	"auxiliary/auxFunctions.h"
+
+1510167842 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\auxiliary\auxfunctions.h
+
+1510153052 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\camera.h
+	"global.h"
+
+1510058080 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\projectiles.h
+	"global.h"
+
+1510174405 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\enemy.h
+	"global.h"
+
+1510134028 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\player.h
+	"global.h"
+
+1510167842 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\particles.h
+	"global.h"
+
+1510058116 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\map.h
+	"global.h"
+
+1510057843 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\auxiliary\auxsdl.h
+
+1510057843 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\auxiliary\mouse.h
+
+1510167842 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\auxiliary\auxfunctions.c
+	"../global.h"
+	"auxFunctions.h"
+
+1510057889 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\auxiliary\auxsdl.c
+	"../global.h"
+	"auxSDL.h"
+
+1510057843 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\auxiliary\mouse.c
+	"../global.h"
+	"mouse.h"
+
+1510175726 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\camera.c
+	"camera.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1510167842 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\color.c
+	"color.h"
+
+1510057843 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\color.h
+	"global.h"
+
+1510175985 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\enemy.c
+	"enemy.h"
+	"camera.h"
+	"map.h"
+	"player.h"
+
+1510167842 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\map.c
+	"map.h"
+	"color.h"
+	"camera.h"
+
+1510167842 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\particles.c
+	"particles.h"
+	"camera.h"
+
+1510167842 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\player.c
+	"player.h"
+	"camera.h"
+
+1510174426 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.08\modules\projectile.c
+	"projectiles.h"
+	"camera.h"
+	"enemy.h"
+	"map.h"
+
+1510265231 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\main.c
+	<time.h>
+	"modules/global.h"
+	"modules/camera.h"
+	"modules/projectiles.h"
+	"modules/enemy.h"
+	"modules/player.h"
+	"modules/particles.h"
+	"modules/map.h"
+	"modules/auxiliary/auxFunctions.h"
+	"modules/auxiliary/auxSDL.h"
+	"modules/auxiliary/mouse.h"
+
+1510252538 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\global.h
+	<stdbool.h>
+	<stdlib.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_gfxPrimitives.h>
+	"auxiliary/auxFunctions.h"
+
+1510167842 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\auxiliary\auxfunctions.h
+
+1510153052 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\camera.h
+	"global.h"
+
+1510234286 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\projectiles.h
+	"global.h"
+
+1510257632 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\enemy.h
+	"global.h"
+
+1510236770 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\player.h
+	"global.h"
+
+1510167842 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\particles.h
+	"global.h"
+
+1510058116 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\map.h
+	"global.h"
+
+1510057843 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\auxiliary\auxsdl.h
+
+1510057843 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\auxiliary\mouse.h
+
+1510167842 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\auxiliary\auxfunctions.c
+	"../global.h"
+	"auxFunctions.h"
+
+1510251174 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\auxiliary\auxsdl.c
+	"../global.h"
+	"auxSDL.h"
+
+1510057843 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\auxiliary\mouse.c
+	"../global.h"
+	"mouse.h"
+
+1510260459 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\camera.c
+	"camera.h"
+	"enemy.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1510242825 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\color.c
+	"color.h"
+
+1510057843 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\color.h
+	"global.h"
+
+1510264827 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\enemy.c
+	"enemy.h"
+	"camera.h"
+	"map.h"
+	"player.h"
+
+1510264095 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\map.c
+	"map.h"
+	"color.h"
+	"camera.h"
+
+1510264913 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\particles.c
+	"particles.h"
+	"camera.h"
+
+1510264827 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\player.c
+	"player.h"
+	"camera.h"
+
+1510235263 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\projectile.c
+	"projectiles.h"
+	"camera.h"
+	"enemy.h"
+	"map.h"
+
+1510264827 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.09\modules\projectiles.c
+	"projectiles.h"
+	"camera.h"
+	"enemy.h"
+	"map.h"
+
+1510354383 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\main.c
+	<time.h>
+	"modules/global.h"
+	"modules/camera.h"
+	"modules/floaters.h"
+	"modules/player.h"
+	"modules/particles.h"
+	"modules/map.h"
+	"modules/auxiliary/auxFunctions.h"
+	"modules/auxiliary/auxSDL.h"
+	"modules/auxiliary/mouse.h"
+
+1510323268 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\global.h
+	<stdbool.h>
+	<stdlib.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_gfxPrimitives.h>
+	"auxiliary/auxFunctions.h"
+
+1510351394 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\auxiliary\auxfunctions.h
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\camera.h
+	"global.h"
+	"floaters.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1510322175 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\projectiles.h
+
+1510334011 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\enemy.h
+	"global.h"
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\player.h
+	"global.h"
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\particles.h
+	"global.h"
+	"camera.h"
+	"map.h"
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\map.h
+	"global.h"
+	"color.h"
+	"camera.h"
+
+1510323052 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\auxiliary\auxsdl.h
+
+1510057843 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\auxiliary\mouse.h
+
+1510351375 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\auxiliary\auxfunctions.c
+	"../global.h"
+	"auxFunctions.h"
+
+1510323052 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\auxiliary\auxsdl.c
+	"../global.h"
+	"auxSDL.h"
+
+1510057843 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\auxiliary\mouse.c
+	"../global.h"
+	"mouse.h"
+
+1510353457 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\camera.c
+	"camera.h"
+	"floaters.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1510353139 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\color.c
+	"color.h"
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\color.h
+	"global.h"
+
+1510333305 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\enemy.c
+	"enemy.h"
+	"map.h"
+	"player.h"
+	"camera.h"
+
+1510353511 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\particles.c
+	"particles.h"
+
+1510323122 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\player.c
+	"player.h"
+	"camera.h"
+
+1510264827 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\projectiles.c
+	"projectiles.h"
+	"camera.h"
+	"enemy.h"
+	"map.h"
+
+1510353139 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\map.c
+	"map.h"
+	"color.h"
+	"camera.h"
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\floaters.h
+	"global.h"
+	"map.h"
+	"player.h"
+	"camera.h"
+
+1510354760 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10\modules\floaters.c
+	"floaters.h"
+
+1510353139 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\color.c
+	"color.h"
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\color.h
+	"global.h"
+
+1510323268 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\global.h
+	<stdbool.h>
+	<stdlib.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_gfxPrimitives.h>
+	"auxiliary/auxFunctions.h"
+
+1510355644 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\auxiliary\auxfunctions.h
+
+1510355092 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\main.c
+	<time.h>
+	"modules/global.h"
+	"modules/camera.h"
+	"modules/floaters.h"
+	"modules/player.h"
+	"modules/particles.h"
+	"modules/map.h"
+	"modules/auxiliary/auxFunctions.h"
+	"modules/auxiliary/auxSDL.h"
+	"modules/auxiliary/mouse.h"
+
+1510355667 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\camera.h
+	"global.h"
+
+1510355644 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\floaters.h
+	"global.h"
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\player.h
+	"global.h"
+
+1510355644 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\particles.h
+	"global.h"
+
+1510355644 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\map.h
+	"global.h"
+
+1510323052 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\auxiliary\auxsdl.h
+
+1510057843 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\auxiliary\mouse.h
+
+1510355092 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\auxiliary\auxfunctions.c
+	"../global.h"
+	"auxFunctions.h"
+
+1510355092 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\auxiliary\auxsdl.c
+	"../global.h"
+	"auxSDL.h"
+
+1510355092 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\auxiliary\mouse.c
+	"../global.h"
+	"mouse.h"
+
+1510355667 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\camera.c
+	"camera.h"
+	"floaters.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1510355644 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\floaters.c
+	"floaters.h"
+	"map.h"
+	"player.h"
+	"camera.h"
+
+1510355644 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\map.c
+	"map.h"
+	"color.h"
+	"camera.h"
+
+1510355393 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.10 másolata\modules\player.c
+	"player.h"
+
+1510413774 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\main.c
+	<time.h>
+	"modules/global.h"
+	"modules/camera.h"
+	"modules/color.h"
+	"modules/floaters.h"
+	"modules/player.h"
+	"modules/particles.h"
+	"modules/world.h"
+	"modules/map.h"
+	"modules/auxiliary/auxFunctions.h"
+	"modules/auxiliary/auxSDL.h"
+	"modules/auxiliary/mouse.h"
+
+1510408022 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\global.h
+	<stdbool.h>
+	<stdlib.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_gfxPrimitives.h>
+	"auxiliary/auxFunctions.h"
+
+1510395185 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\auxiliary\auxfunctions.h
+
+1510400872 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\camera.h
+	"global.h"
+
+1510355644 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\floaters.h
+	"global.h"
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\player.h
+	"global.h"
+
+1510402437 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\particles.h
+	"global.h"
+
+1510355644 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\map.h
+	"global.h"
+
+1510404909 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\auxiliary\auxsdl.h
+
+1510405762 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\auxiliary\mouse.h
+
+1510395185 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\auxiliary\auxfunctions.c
+	"../global.h"
+	"auxFunctions.h"
+
+1510412939 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\auxiliary\auxsdl.c
+	"../global.h"
+	"auxSDL.h"
+
+1510405875 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\auxiliary\mouse.c
+	"../global.h"
+	"mouse.h"
+	"auxSDL.h"
+
+1510401222 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\camera.c
+	"camera.h"
+	"floaters.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1510353139 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\color.c
+	"color.h"
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\color.h
+	"global.h"
+
+1510355644 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\floaters.c
+	"floaters.h"
+	"map.h"
+	"player.h"
+	"camera.h"
+
+1510402437 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\particles.c
+	"particles.h"
+	"camera.h"
+	"map.h"
+
+1510409229 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\player.c
+	"player.h"
+
+1510413490 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\map.c
+	"map.h"
+	"color.h"
+	"camera.h"
+
+1510398462 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\world.h
+	"global.h"
+	"map.h"
+	"player.h"
+	"particles.h"
+
+1510405942 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.11\modules\world.c
+	"world.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\auxiliary\auxfunctions.c
+	"../global.h"
+	"auxFunctions.h"
+
+1510607222 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\global.h
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_gfxPrimitives.h>
+	"auxiliary/auxFunctions.h"
+
+1510395185 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\auxiliary\auxfunctions.h
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\auxiliary\auxsdl.c
+	"../global.h"
+	"auxSDL.h"
+
+1510583520 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\auxiliary\auxsdl.h
+	"../global.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\auxiliary\mouse.c
+	"../global.h"
+	"mouse.h"
+	"auxSDL.h"
+
+1510405762 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\auxiliary\mouse.h
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\camera.c
+	"camera.h"
+	"floaters.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1510490093 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\camera.h
+	"global.h"
+
+1510483902 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\floaters.h
+	"global.h"
+
+1510605949 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\player.h
+	"global.h"
+
+1510490093 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\map.h
+	"global.h"
+
+1510512043 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\particles.h
+	"global.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\color.c
+	"color.h"
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\color.h
+	"global.h"
+
+1510610895 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\floaters.c
+	"floaters.h"
+	"map.h"
+	"player.h"
+	"camera.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\map.c
+	"map.h"
+	"color.h"
+	"camera.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\particles.c
+	"particles.h"
+	"camera.h"
+	"map.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\player.c
+	"player.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\world.c
+	"world.h"
+	"map.h"
+	"player.h"
+	"particles.h"
+
+1510490093 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\world.h
+	"global.h"
+
+1510607752 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\main.c
+	<time.h>
+	<wchar.h>
+	<string.h>
+	"modules/global.h"
+	"modules/camera.h"
+	"modules/color.h"
+	"modules/floaters.h"
+	"modules/player.h"
+	"modules/particles.h"
+	"modules/world.h"
+	"modules/map.h"
+	"modules/auxiliary/auxFunctions.h"
+	"modules/auxiliary/auxSDL.h"
+	"modules/auxiliary/unicodePrint.h"
+	"modules/auxiliary/mouse.h"
+	"modules/menu.h"
+
+1510611072 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\menu.c
+	"menu.h"
+	"particles.h"
+	"auxiliary/unicodePrint.h"
+	"auxiliary/mouse.h"
+	<wchar.h>
+
+1510605366 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\menu.h
+	"global.h"
+
+1341006778 c:\program files (x86)\codeblocks\mingw\include\wchar.h
+	<_mingw.h>
+	<stddef.h>
+	<stdarg.h>
+	<wctype.h>
+	<sys/types.h>
+	<stdio.h>
+	<stdint.h>
+	<stdint.h>
+
+1341006778 c:\program files (x86)\codeblocks\mingw\include\wctype.h
+	<_mingw.h>
+	<stddef.h>
+
+1341006774 c:\program files (x86)\codeblocks\mingw\include\locale.h
+	<_mingw.h>
+	<stddef.h>
+	<stddef.h>
+
+1510606854 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\auxiliary\unicodeprint.c
+	"unicodePrint.h"
+
+1510597423 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\modules\auxiliary\unicodeprint.h
+	"../global.h"
+
+1510602437 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\dm\debugmalloc.c
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	<stdarg.h>
+	"debugmalloc.h"
+
+1510602440 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.12\dm\debugmalloc.h
+	<stdlib.h>
+	<stdbool.h>
+
+1510602437 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\dm\debugmalloc.c
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	<stdarg.h>
+	"debugmalloc.h"
+
+1510602440 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\dm\debugmalloc.h
+	<stdlib.h>
+	<stdbool.h>
+
+1510614810 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\main.c
+	<time.h>
+	<wchar.h>
+	<string.h>
+	"modules/global.h"
+	"modules/camera.h"
+	"modules/color.h"
+	"modules/floaters.h"
+	"modules/player.h"
+	"modules/particles.h"
+	"modules/world.h"
+	"modules/map.h"
+	"modules/auxiliary/auxFunctions.h"
+	"modules/auxiliary/auxSDL.h"
+	"modules/auxiliary/unicodePrint.h"
+	"modules/auxiliary/mouse.h"
+	"modules/menu.h"
+
+1510614365 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\global.h
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<locale.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_gfxPrimitives.h>
+	"auxiliary/auxFunctions.h"
+
+1510395185 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\auxiliary\auxfunctions.h
+
+1510490093 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\camera.h
+	"global.h"
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\color.h
+	"global.h"
+
+1510483902 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\floaters.h
+	"global.h"
+
+1510605949 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\player.h
+	"global.h"
+
+1510512043 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\particles.h
+	"global.h"
+
+1510490093 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\world.h
+	"global.h"
+
+1510490093 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\map.h
+	"global.h"
+
+1510583520 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\auxiliary\auxsdl.h
+	"../global.h"
+
+1510597423 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\auxiliary\unicodeprint.h
+	"../global.h"
+
+1510405762 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\auxiliary\mouse.h
+
+1510605366 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\menu.h
+	"global.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\auxiliary\auxfunctions.c
+	"../global.h"
+	"auxFunctions.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\auxiliary\auxsdl.c
+	"../global.h"
+	"auxSDL.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\auxiliary\mouse.c
+	"../global.h"
+	"mouse.h"
+	"auxSDL.h"
+
+1510614453 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\auxiliary\unicodeprint.c
+	"unicodePrint.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\camera.c
+	"camera.h"
+	"floaters.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\color.c
+	"color.h"
+
+1510614321 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\floaters.c
+	"floaters.h"
+	"map.h"
+	"player.h"
+	"camera.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\map.c
+	"map.h"
+	"color.h"
+	"camera.h"
+
+1510614852 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\menu.c
+	"menu.h"
+	"particles.h"
+	"auxiliary/unicodePrint.h"
+	"auxiliary/mouse.h"
+	<wchar.h>
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\particles.c
+	"particles.h"
+	"camera.h"
+	"map.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\player.c
+	"player.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.13 este\modules\world.c
+	"world.h"
+	"map.h"
+	"player.h"
+	"particles.h"
+
+1510602437 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\dm\debugmalloc.c
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	<stdarg.h>
+	"debugmalloc.h"
+
+1510602440 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\dm\debugmalloc.h
+	<stdlib.h>
+	<stdbool.h>
+
+1510847434 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\main.c
+	<time.h>
+	<wchar.h>
+	<string.h>
+	"modules/global.h"
+	"modules/camera.h"
+	"modules/color.h"
+	"modules/floaters.h"
+	"modules/player.h"
+	"modules/particles.h"
+	"modules/world.h"
+	"modules/map.h"
+	"modules/auxiliary/auxFunctions.h"
+	"modules/auxiliary/auxSDL.h"
+	"modules/auxiliary/unicodePrint.h"
+	"modules/auxiliary/mouse.h"
+	"modules/menu.h"
+	"modules/saves.h"
+
+1510614365 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\global.h
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<locale.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_gfxPrimitives.h>
+	"auxiliary/auxFunctions.h"
+
+1510395185 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\auxiliary\auxfunctions.h
+
+1510490093 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\camera.h
+	"global.h"
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\color.h
+	"global.h"
+
+1510483902 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\floaters.h
+	"global.h"
+
+1510605949 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\player.h
+	"global.h"
+
+1510512043 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\particles.h
+	"global.h"
+
+1510765777 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\world.h
+	"global.h"
+
+1510733544 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\map.h
+	"global.h"
+
+1510583520 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\auxiliary\auxsdl.h
+	"../global.h"
+
+1510597423 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\auxiliary\unicodeprint.h
+	"../global.h"
+
+1510405762 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\auxiliary\mouse.h
+
+1510766960 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\menu.h
+	"global.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\auxiliary\auxfunctions.c
+	"../global.h"
+	"auxFunctions.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\auxiliary\auxsdl.c
+	"../global.h"
+	"auxSDL.h"
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\auxiliary\mouse.c
+	"../global.h"
+	"mouse.h"
+	"auxSDL.h"
+
+1510614453 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\auxiliary\unicodeprint.c
+	"unicodePrint.h"
+
+1510841858 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\camera.c
+	"camera.h"
+	"floaters.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1510838977 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\color.c
+	"color.h"
+
+1510664133 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\floaters.c
+	"floaters.h"
+	"map.h"
+	"player.h"
+	"camera.h"
+
+1510834545 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\map.c
+	"map.h"
+	"color.h"
+	"camera.h"
+
+1510766974 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\menu.c
+	"menu.h"
+	"particles.h"
+	"saves.h"
+	"auxiliary/unicodePrint.h"
+	"auxiliary/mouse.h"
+	<wchar.h>
+
+1510839147 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\particles.c
+	"particles.h"
+	"camera.h"
+	"map.h"
+
+1510847434 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\player.c
+	"player.h"
+
+1510765962 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\world.c
+	"world.h"
+	"map.h"
+	"player.h"
+	"particles.h"
+
+1510740610 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\saves.h
+
+1510765165 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.14\modules\saves.c
+	"saves.h"
+	"map.h"
+	<unistd.h>
+
+1341006776 c:\program files (x86)\codeblocks\mingw\include\unistd.h
+	<io.h>
+	<process.h>
+	<getopt.h>
+	<sys/types.h>
+
+1341006774 c:\program files (x86)\codeblocks\mingw\include\io.h
+	<_mingw.h>
+	<sys/types.h>
+
+1341006772 c:\program files (x86)\codeblocks\mingw\include\getopt.h
+	<_mingw.h>
+
+1510602437 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\dm\debugmalloc.c
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	<stdarg.h>
+	"debugmalloc.h"
+
+1510602440 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\dm\debugmalloc.h
+	<stdlib.h>
+	<stdbool.h>
+
+1510960704 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\main.c
+	<time.h>
+	<wchar.h>
+	<string.h>
+	"modules/global.h"
+	"modules/camera.h"
+	"modules/color.h"
+	"modules/floaters.h"
+	"modules/player.h"
+	"modules/particles.h"
+	"modules/world.h"
+	"modules/map.h"
+	"modules/auxiliary/auxFunctions.h"
+	"modules/auxiliary/auxSDL.h"
+	"modules/auxiliary/unicodePrint.h"
+	"modules/auxiliary/mouse.h"
+	"modules/menu/menuDraw.h"
+	"modules/menu/menuFSM.h"
+	"modules/saves.h"
+
+1510957448 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\global.h
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<locale.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_gfxPrimitives.h>
+	"auxiliary/auxFunctions.h"
+
+1510395185 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\auxiliary\auxfunctions.h
+
+1510955994 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\camera.h
+	"global.h"
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\color.h
+	"global.h"
+
+1510483902 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\floaters.h
+	"global.h"
+
+1510954423 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\player.h
+	"global.h"
+
+1510512043 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\particles.h
+	"global.h"
+
+1510765777 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\world.h
+	"global.h"
+
+1510733544 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\map.h
+	"global.h"
+
+1510583520 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\auxiliary\auxsdl.h
+	"../global.h"
+
+1510597423 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\auxiliary\unicodeprint.h
+	"../global.h"
+
+1510405762 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\auxiliary\mouse.h
+
+1510766960 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\menu.h
+	"global.h"
+
+1510951958 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\saves.h
+	"global.h"
+	<time.h>
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\auxiliary\auxfunctions.c
+	"../global.h"
+	"auxFunctions.h"
+
+1510955578 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\auxiliary\auxsdl.c
+	"../global.h"
+	"auxSDL.h"
+
+1510957448 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\auxiliary\mouse.c
+	"../global.h"
+	"mouse.h"
+	"auxSDL.h"
+
+1510614453 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\auxiliary\unicodeprint.c
+	"unicodePrint.h"
+
+1510955994 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\camera.c
+	"camera.h"
+	"floaters.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1510838977 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\color.c
+	"color.h"
+
+1510664133 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\floaters.c
+	"floaters.h"
+	"map.h"
+	"player.h"
+	"camera.h"
+
+1510834545 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\map.c
+	"map.h"
+	"color.h"
+	"camera.h"
+
+1510955023 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\menu.c
+	"menu.h"
+	"particles.h"
+	"saves.h"
+	"auxiliary/unicodePrint.h"
+	"auxiliary/mouse.h"
+	<wchar.h>
+
+1510839147 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\particles.c
+	"particles.h"
+	"camera.h"
+	"map.h"
+
+1510954406 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\player.c
+	"player.h"
+
+1510954974 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\saves.c
+	"saves.h"
+	"player.h"
+	"map.h"
+	<time.h>
+
+1510955715 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\world.c
+	"world.h"
+	"map.h"
+	"player.h"
+	"particles.h"
+
+1510961430 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\menu\menudraw.h
+	"../global.h"
+
+1510960685 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\menu\menufsm.h
+	"../global.h"
+	"menuDraw.h"
+
+1510961420 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\menu\menudraw.c
+	"menuDraw.h"
+	"../particles.h"
+	"../saves.h"
+	"../auxiliary/unicodePrint.h"
+	"../auxiliary/mouse.h"
+	<wchar.h>
+
+1510961364 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.17\modules\menu\menufsm.c
+	"menuFSM.h"
+	"../auxiliary/mouse.h"
+	"../auxiliary/unicodePrint.h"
+
+1510602437 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\dm\debugmalloc.c
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	<stdarg.h>
+	"debugmalloc.h"
+
+1510602440 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\dm\debugmalloc.h
+	<stdlib.h>
+	<stdbool.h>
+
+1511437250 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\main.c
+	<time.h>
+	<string.h>
+	"modules/global.h"
+	"modules/camera.h"
+	"modules/color.h"
+	"modules/floaters.h"
+	"modules/player.h"
+	"modules/particles.h"
+	"modules/world.h"
+	"modules/map.h"
+	"modules/auxiliary/auxFunctions.h"
+	"modules/auxiliary/auxSDL.h"
+	"modules/auxiliary/unicodePrint.h"
+	"modules/auxiliary/mouse.h"
+	"modules/menu/menuDraw.h"
+	"modules/menu/menuFSM.h"
+	"modules/saves.h"
+
+1511437250 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\global.h
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<wchar.h>
+	<locale.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_gfxPrimitives.h>
+	"auxiliary/auxFunctions.h"
+
+1510395185 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\auxiliary\auxfunctions.h
+
+1510955994 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\camera.h
+	"global.h"
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\color.h
+	"global.h"
+
+1510483902 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\floaters.h
+	"global.h"
+
+1510954423 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\player.h
+	"global.h"
+
+1510512043 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\particles.h
+	"global.h"
+
+1510765777 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\world.h
+	"global.h"
+
+1510733544 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\map.h
+	"global.h"
+
+1510583520 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\auxiliary\auxsdl.h
+	"../global.h"
+
+1510597423 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\auxiliary\unicodeprint.h
+	"../global.h"
+
+1510405762 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\auxiliary\mouse.h
+
+1511439863 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\menu\menudraw.h
+	"../global.h"
+
+1511436392 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\menu\menufsm.h
+	"../global.h"
+	"menuDraw.h"
+
+1511437408 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\saves.h
+	"global.h"
+	<time.h>
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\auxiliary\auxfunctions.c
+	"../global.h"
+	"auxFunctions.h"
+
+1510955578 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\auxiliary\auxsdl.c
+	"../global.h"
+	"auxSDL.h"
+
+1510957448 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\auxiliary\mouse.c
+	"../global.h"
+	"mouse.h"
+	"auxSDL.h"
+
+1510614453 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\auxiliary\unicodeprint.c
+	"unicodePrint.h"
+
+1510955994 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\camera.c
+	"camera.h"
+	"floaters.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1510838977 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\color.c
+	"color.h"
+
+1510664133 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\floaters.c
+	"floaters.h"
+	"map.h"
+	"player.h"
+	"camera.h"
+
+1510834545 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\map.c
+	"map.h"
+	"color.h"
+	"camera.h"
+
+1511439888 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\menu\menudraw.c
+	"menuDraw.h"
+	"../particles.h"
+	"../saves.h"
+	"../auxiliary/unicodePrint.h"
+	"../auxiliary/mouse.h"
+	<wchar.h>
+
+1511440116 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\menu\menufsm.c
+	"menuFSM.h"
+	"../auxiliary/mouse.h"
+	"../auxiliary/unicodePrint.h"
+
+1510839147 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\particles.c
+	"particles.h"
+	"camera.h"
+	"map.h"
+
+1510954406 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\player.c
+	"player.h"
+
+1511439257 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\saves.c
+	"saves.h"
+	"player.h"
+	"map.h"
+	<time.h>
+
+1510955715 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.23\modules\world.c
+	"world.h"
+	"map.h"
+	"player.h"
+	"particles.h"
+
+1510602437 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\dm\debugmalloc.c
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	<stdarg.h>
+	"debugmalloc.h"
+
+1510602440 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\dm\debugmalloc.h
+	<stdlib.h>
+	<stdbool.h>
+
+1511437250 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\main.c
+	<time.h>
+	<string.h>
+	"modules/global.h"
+	"modules/camera.h"
+	"modules/color.h"
+	"modules/floaters.h"
+	"modules/player.h"
+	"modules/particles.h"
+	"modules/world.h"
+	"modules/map.h"
+	"modules/auxiliary/auxFunctions.h"
+	"modules/auxiliary/auxSDL.h"
+	"modules/auxiliary/unicodePrint.h"
+	"modules/auxiliary/mouse.h"
+	"modules/menu/menuDraw.h"
+	"modules/menu/menuFSM.h"
+	"modules/saves.h"
+
+1511437250 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\global.h
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<wchar.h>
+	<locale.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_gfxPrimitives.h>
+	"auxiliary/auxFunctions.h"
+
+1510395185 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\auxiliary\auxfunctions.h
+
+1510955994 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\camera.h
+	"global.h"
+
+1510355092 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\color.h
+	"global.h"
+
+1510483902 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\floaters.h
+	"global.h"
+
+1510954423 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\player.h
+	"global.h"
+
+1510512043 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\particles.h
+	"global.h"
+
+1510765777 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\world.h
+	"global.h"
+
+1510733544 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\map.h
+	"global.h"
+
+1510583520 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\auxiliary\auxsdl.h
+	"../global.h"
+
+1510597423 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\auxiliary\unicodeprint.h
+	"../global.h"
+
+1510405762 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\auxiliary\mouse.h
+
+1511439863 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\menu\menudraw.h
+	"../global.h"
+
+1511436392 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\menu\menufsm.h
+	"../global.h"
+	"menuDraw.h"
+
+1511437408 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\saves.h
+	"global.h"
+	<time.h>
+
+1510603213 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\auxiliary\auxfunctions.c
+	"../global.h"
+	"auxFunctions.h"
+
+1510955578 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\auxiliary\auxsdl.c
+	"../global.h"
+	"auxSDL.h"
+
+1510957448 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\auxiliary\mouse.c
+	"../global.h"
+	"mouse.h"
+	"auxSDL.h"
+
+1510614453 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\auxiliary\unicodeprint.c
+	"unicodePrint.h"
+
+1512042260 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\camera.c
+	"camera.h"
+	"floaters.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1510838977 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\color.c
+	"color.h"
+
+1510664133 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\floaters.c
+	"floaters.h"
+	"map.h"
+	"player.h"
+	"camera.h"
+
+1510834545 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\map.c
+	"map.h"
+	"color.h"
+	"camera.h"
+
+1511439888 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\menu\menudraw.c
+	"menuDraw.h"
+	"../particles.h"
+	"../saves.h"
+	"../auxiliary/unicodePrint.h"
+	"../auxiliary/mouse.h"
+	<wchar.h>
+
+1511440116 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\menu\menufsm.c
+	"menuFSM.h"
+	"../auxiliary/mouse.h"
+	"../auxiliary/unicodePrint.h"
+
+1510839147 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\particles.c
+	"particles.h"
+	"camera.h"
+	"map.h"
+
+1510954406 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\player.c
+	"player.h"
+
+1512045755 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\saves.c
+	"saves.h"
+	"player.h"
+	"map.h"
+	<time.h>
+
+1510955715 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 11.30\modules\world.c
+	"world.h"
+	"map.h"
+	"player.h"
+	"particles.h"
+
+1510602437 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\dm\debugmalloc.c
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	<stdarg.h>
+	"debugmalloc.h"
+
+1510602440 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\dm\debugmalloc.h
+	<stdlib.h>
+	<stdbool.h>
+
+1512247456 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\main.c
+	<time.h>
+	<string.h>
+	"modules/global.h"
+	"modules/camera.h"
+	"modules/color.h"
+	"modules/floaters.h"
+	"modules/player.h"
+	"modules/particles.h"
+	"modules/world.h"
+	"modules/map.h"
+	"modules/auxiliary/auxFunctions.h"
+	"modules/auxiliary/auxSDL.h"
+	"modules/auxiliary/unicodePrint.h"
+	"modules/auxiliary/mouse.h"
+	"modules/menu/menuDraw.h"
+	"modules/menu/menuFSM.h"
+	"modules/saves.h"
+
+1512225298 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\global.h
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<wchar.h>
+	<locale.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_gfxPrimitives.h>
+	"auxiliary/auxFunctions.h"
+
+1512233572 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\auxiliary\auxfunctions.h
+	"../global.h"
+
+1512219382 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\camera.h
+	"global.h"
+	"floaters.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1512224899 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\color.h
+	"global.h"
+
+1512234574 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\floaters.h
+	"global.h"
+	"map.h"
+	"player.h"
+	"camera.h"
+	"auxiliary/mouse.h"
+
+1512234509 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\player.h
+	"global.h"
+	"map.h"
+	"auxiliary/mouse.h"
+
+1512232388 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\particles.h
+	"global.h"
+	"camera.h"
+	"map.h"
+
+1510765777 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\world.h
+	"global.h"
+
+1512231661 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\map.h
+	"global.h"
+	"color.h"
+	"camera.h"
+
+1512247456 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\auxiliary\auxsdl.h
+	"../global.h"
+
+1510597423 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\auxiliary\unicodeprint.h
+	"../global.h"
+
+1512238906 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\auxiliary\mouse.h
+
+1512212568 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\menu\menudraw.h
+	"../global.h"
+
+1512211232 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\menu\menufsm.h
+	"../global.h"
+	"menuDraw.h"
+
+1512242384 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\saves.h
+	"global.h"
+	<time.h>
+
+1512233729 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\auxiliary\auxfunctions.c
+	"auxFunctions.h"
+
+1512248252 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\auxiliary\auxsdl.c
+	"../global.h"
+	"auxSDL.h"
+
+1512247051 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\auxiliary\mouse.c
+	"../global.h"
+	"mouse.h"
+	"auxSDL.h"
+
+1510614453 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\auxiliary\unicodeprint.c
+	"unicodePrint.h"
+
+1512232007 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\camera.c
+	"camera.h"
+
+1512232833 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\color.c
+	"color.h"
+
+1512234555 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\floaters.c
+	"floaters.h"
+
+1512232388 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\map.c
+	"map.h"
+
+1512242427 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\menu\menudraw.c
+	"menuDraw.h"
+	"../particles.h"
+	"../saves.h"
+	"../auxiliary/unicodePrint.h"
+	"../auxiliary/mouse.h"
+	<wchar.h>
+
+1512248559 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\menu\menufsm.c
+	"menuFSM.h"
+	"../auxiliary/mouse.h"
+	"../auxiliary/unicodePrint.h"
+	"../saves.h"
+
+1512232833 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\particles.c
+	"particles.h"
+
+1512243422 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\player.c
+	"player.h"
+
+1512249851 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\saves.c
+	"saves.h"
+	"player.h"
+	"map.h"
+	<time.h>
+	<errno.h>
+
+1512232936 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.02\modules\world.c
+	"world.h"
+	"map.h"
+	"player.h"
+	"particles.h"
+
+1341006772 c:\program files (x86)\codeblocks\mingw\include\errno.h
+	<_mingw.h>
+
+1510602437 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\dm\debugmalloc.c
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	<stdarg.h>
+	"debugmalloc.h"
+
+1512255685 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\dm\debugmalloc.h
+	<stdlib.h>
+	<stdbool.h>
+
+1512331214 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\main.c
+	<time.h>
+	<string.h>
+	"modules/global.h"
+	"modules/camera.h"
+	"modules/color.h"
+	"modules/floaters.h"
+	"modules/particles.h"
+	"modules/world.h"
+	"modules/map.h"
+	"modules/menu/menuDraw.h"
+	"modules/menu/menuFSM.h"
+
+1512225298 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\global.h
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<wchar.h>
+	<locale.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_gfxPrimitives.h>
+	"auxiliary/auxFunctions.h"
+
+1512303207 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\auxiliary\auxfunctions.h
+	"../global.h"
+
+1512307840 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\camera.h
+	"global.h"
+	"floaters.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1512313619 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\floaters.h
+	"global.h"
+	"map.h"
+	"player.h"
+	"camera.h"
+	"auxiliary/auxSDL.h"
+
+1512231661 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\map.h
+	"global.h"
+	"color.h"
+	"camera.h"
+
+1512224899 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\color.h
+	"global.h"
+
+1512313666 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\player.h
+	"global.h"
+	"map.h"
+	"auxiliary/auxSDL.h"
+
+1512313619 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\auxiliary\mouse.h
+	"../global.h"
+	"auxSDL.h"
+
+1512308561 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\particles.h
+	"global.h"
+	"camera.h"
+	"map.h"
+
+1512316104 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\world.h
+	"global.h"
+	"map.h"
+	"player.h"
+	"particles.h"
+
+1512318460 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\auxiliary\auxsdl.h
+	"../global.h"
+	"unicodePrint.h"
+
+1512324260 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\auxiliary\unicodeprint.h
+	"../global.h"
+
+1512316178 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\menu\menudraw.h
+	<stdio.h>
+	<wchar.h>
+	"../global.h"
+	"../particles.h"
+	"../saves.h"
+	"../auxiliary/unicodePrint.h"
+	"../auxiliary/auxSDL.h"
+
+1512317761 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\menu\menufsm.h
+	"../global.h"
+	"menuDraw.h"
+	"../world.h"
+	"../saves.h"
+	"../auxiliary/auxSDL.h"
+	"../auxiliary/unicodePrint.h"
+
+1512316207 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\saves.h
+	"global.h"
+	<time.h>
+	"player.h"
+	"map.h"
+
+1512312174 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\auxiliary\auxfunctions.c
+	"auxFunctions.h"
+
+1512318412 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\auxiliary\auxsdl.c
+	"auxSDL.h"
+
+1512312857 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\auxiliary\mouse.c
+	"mouse.h"
+
+1512314257 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\auxiliary\unicodeprint.c
+	"unicodePrint.h"
+
+1512312174 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\camera.c
+	"camera.h"
+
+1512312174 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\color.c
+	"color.h"
+
+1512315310 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\floaters.c
+	"floaters.h"
+
+1512312174 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\map.c
+	"map.h"
+
+1512321309 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\menu\menudraw.c
+	"menuDraw.h"
+
+1512318770 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\menu\menufsm.c
+	"menuFSM.h"
+
+1512318734 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\particles.c
+	"particles.h"
+
+1512324260 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\player.c
+	"player.h"
+
+1512317363 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\saves.c
+	"saves.h"
+
+1512316104 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\c\c3d 12.03\modules\world.c
+	"world.h"
+
+1512331214 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\main.c
+	<time.h>
+	<string.h>
+	"modules/global.h"
+	"modules/camera.h"
+	"modules/color.h"
+	"modules/floaters.h"
+	"modules/particles.h"
+	"modules/world.h"
+	"modules/map.h"
+	"modules/menu/menuDraw.h"
+	"modules/menu/menuFSM.h"
+
+1512225298 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\global.h
+	<stdbool.h>
+	<stdlib.h>
+	<stdio.h>
+	<wchar.h>
+	<locale.h>
+	<SDL.h>
+	<SDL_ttf.h>
+	<SDL_gfxPrimitives.h>
+	"auxiliary/auxFunctions.h"
+
+1512303207 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\auxiliary\auxfunctions.h
+	"../global.h"
+
+1512307840 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\camera.h
+	"global.h"
+	"floaters.h"
+	"player.h"
+	"map.h"
+	"particles.h"
+
+1512313619 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\floaters.h
+	"global.h"
+	"map.h"
+	"player.h"
+	"camera.h"
+	"auxiliary/auxSDL.h"
+
+1512231661 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\map.h
+	"global.h"
+	"color.h"
+	"camera.h"
+
+1512224899 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\color.h
+	"global.h"
+
+1512313666 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\player.h
+	"global.h"
+	"map.h"
+	"auxiliary/auxSDL.h"
+
+1512318460 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\auxiliary\auxsdl.h
+	"../global.h"
+	"unicodePrint.h"
+
+1512324260 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\auxiliary\unicodeprint.h
+	"../global.h"
+
+1512308561 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\particles.h
+	"global.h"
+	"camera.h"
+	"map.h"
+
+1512316104 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\world.h
+	"global.h"
+	"map.h"
+	"player.h"
+	"particles.h"
+
+1512316178 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\menu\menudraw.h
+	<stdio.h>
+	<wchar.h>
+	"../global.h"
+	"../particles.h"
+	"../saves.h"
+	"../auxiliary/unicodePrint.h"
+	"../auxiliary/auxSDL.h"
+
+1512316207 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\saves.h
+	"global.h"
+	<time.h>
+	"player.h"
+	"map.h"
+
+1512317761 c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\menu\menufsm.h
+	"../global.h"
+	"menuDraw.h"
+	"../world.h"
+	"../saves.h"
+	"../auxiliary/auxSDL.h"
+	"../auxiliary/unicodePrint.h"
+
+1512312174 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\auxiliary\auxfunctions.c
+	"auxFunctions.h"
+
+1512318412 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\auxiliary\auxsdl.c
+	"auxSDL.h"
+
+1512314257 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\auxiliary\unicodeprint.c
+	"unicodePrint.h"
+
+1512312174 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\camera.c
+	"camera.h"
+
+1512312174 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\color.c
+	"color.h"
+
+1512315310 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\floaters.c
+	"floaters.h"
+
+1512312174 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\map.c
+	"map.h"
+
+1512321309 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\menu\menudraw.c
+	"menuDraw.h"
+
+1512318770 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\menu\menufsm.c
+	"menuFSM.h"
+
+1512318734 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\particles.c
+	"particles.h"
+
+1512324260 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\player.c
+	"player.h"
+
+1512317363 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\saves.c
+	"saves.h"
+
+1512316104 source:c:\users\schmelczer andrás\desktop\1.félév\prog\hf\végleges\c3d 12.03\modules\world.c
+	"world.h"
+

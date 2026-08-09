@@ -1,0 +1,45 @@
+#ifndef MENU_H_INCLUDED
+#define MENU_H_INCLUDED
+
+    #include <stdio.h>
+    #include <wchar.h>
+    #include "../global.h"
+    #include "../particles.h"
+    #include "../saves.h"
+    #include "../auxiliary/unicodePrint.h"
+    #include "../auxiliary/auxSDL.h"
+
+    #define topListItemsMax 8
+    #define menuStart (int) 42
+    #define menuTav (int) 9
+    #define optionsStart (int) 25
+    #define optionsTav (int) 13
+    #define infoStart (int) 20
+    #define infoTav (int) 7
+    #define loadStart (int) 10
+    #define loadTav (int) 15
+
+    typedef enum states {
+        mainMenu,
+        optionsMenu,
+        infoMenu,
+        pauseMenu,
+        game,
+        nameInput,
+        fading,
+        topListMenu,
+        loadMenu,
+        quit,
+        initGame,
+        initLoadedGame
+    } states;
+
+    void drawMainMenu(int deltaTime);
+    void drawOptionsMenu(int deltaTime, int currentOptions[], bool click);
+    void drawInfoMenu(int deltaTime);
+    void loadTopList();
+    void drawTopList(int deltaTime);
+    void drawPauseMenu(bool saved);
+    void drawLoadMenu(int deltaTime);
+
+#endif // MENU_H_INCLUDED

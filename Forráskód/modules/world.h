@@ -1,0 +1,12 @@
+#ifndef WORLD_H_INCLUDED
+#define WORLD_H_INCLUDED
+
+    #include "global.h"
+    #include "map.h"
+    #include "player.h"
+    #include "particles.h"
+
+    void createMenuWorld();
+    void createWorld(int options[]);
+
+#endif // WORLD_H_INCLUDED

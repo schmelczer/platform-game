@@ -1,0 +1,27 @@
+var player_8c =
+[
+    [ "playerColors", "player_8c.html#a703778a288bb9fbad5770ce5568b9f62", null ],
+    [ "playerMaxVelocity", "player_8c.html#a042365c8db183d565611a38fb1a0dcac", null ],
+    [ "playerSize", "player_8c.html#ab3789403bbd5560195cf71844b5b912e", null ],
+    [ "playerXAcceleration", "player_8c.html#a8570165edb8b4875d4161ce1f311c0b6", null ],
+    [ "drawPointsText", "player_8c.html#aabf81f91c384935a8b506ba978d594d9", null ],
+    [ "getPlayerRenderObject", "player_8c.html#ae73902ac8e3fcdcb7cb46aa9919313aa", null ],
+    [ "getPlayerStats", "player_8c.html#a777f1f2a2f0095891310db834abd699f", null ],
+    [ "getPoints", "player_8c.html#a2bfc3c1acea7211e0fc7494cf8ef4188", null ],
+    [ "isAlive", "player_8c.html#a59db7399f5931387fa42b8685cbc137c", null ],
+    [ "movePlayer", "player_8c.html#a6ca84f87a63a3e6987f2e1c524f3c548", null ],
+    [ "setDie", "player_8c.html#af9a085e2f8bab2460a2b93ee1f560b67", null ],
+    [ "setPlayerStartingPosition", "player_8c.html#a7a9664c78d10c46d69ccd0d594cb3a64", null ],
+    [ "setPoints", "player_8c.html#a0629b8699207f86233fac79182de3480", null ],
+    [ "shoot", "player_8c.html#af2f62e4eb7014e2cef0a2003a3b35028", null ],
+    [ "slowTime", "player_8c.html#a85fa04ca438585571cfeb5542dae0914", null ],
+    [ "updateText", "player_8c.html#a4b13896d24503f29dc9055e834057a67", null ],
+    [ "directionOfMovement", "player_8c.html#a4b7c8df70f65c42a14d639fa912cd766", null ],
+    [ "isDead", "player_8c.html#a6d8d50481e69a9e9bc74678e84c06a04", null ],
+    [ "isFalling", "player_8c.html#a33c58b7dc11eed855b9022f01cdca948", null ],
+    [ "isJumping", "player_8c.html#a057d4b25e40212a99e0d3601e2cdfa1e", null ],
+    [ "playerPosition", "player_8c.html#a562292049914bcab4501fb12d91c25be", null ],
+    [ "playerVelocity", "player_8c.html#af33aad8f9e95f471c59fd148393c0fbe", null ],
+    [ "points", "player_8c.html#af7f8f4a4e39e09fdb5e9f02330ecabef", null ],
+    [ "usedFrames", "player_8c.html#a89c5bd596fabb2d98c368e0e7d0a7d57", null ]
+];

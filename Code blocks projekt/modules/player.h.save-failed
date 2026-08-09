@@ -1,0 +1,16 @@
+#include "global.h"
+
+
+#ifndef PLAYER_H_INCLUDED
+#define PLAYER_H_INCLUDED
+
+
+void shoot(intVector2D mouse);
+bool slowTime(bool isEnabled);
+void getPlayerStats(vector2D* maxVelocity, vector2D* acceleration);
+void setPlayerStartingPosition(int x, int y);
+void movePlayer(unsigned char* keys, int deltaTime);
+renderObject getPlayerRenderObject();
+void drawPointsText();
+
+#endif // PLAYER_H_INCLUDED

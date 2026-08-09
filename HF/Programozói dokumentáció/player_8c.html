@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Platform játék: player.c fájlreferencia</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Platform játék
+   </div>
+   <div id="projectbrief">3D-s megjelenítés, véletlenszerű pályagenerálás, jutalmazó játékélmény</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','Keresés');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('player_8c.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Makródefiníciók</a> &#124;
+<a href="#func-members">Függvények</a> &#124;
+<a href="#var-members">Változók</a>  </div>
+  <div class="headertitle">
+<div class="title">player.c fájlreferencia</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="player_8h_source.html">player.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Makródefiníciók</h2></td></tr>
+<tr class="memitem:ab3789403bbd5560195cf71844b5b912e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#ab3789403bbd5560195cf71844b5b912e">playerSize</a>&#160;&#160;&#160;(<a class="el" href="global_8h.html#structvector3_d">vector3D</a>) {0.4, 0.9, 0.25}</td></tr>
+<tr class="separator:ab3789403bbd5560195cf71844b5b912e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a042365c8db183d565611a38fb1a0dcac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a042365c8db183d565611a38fb1a0dcac">playerMaxVelocity</a>&#160;&#160;&#160;(<a class="el" href="global_8h.html#structvector2_d">vector2D</a>) {0.0045, 0.03}</td></tr>
+<tr class="separator:a042365c8db183d565611a38fb1a0dcac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a703778a288bb9fbad5770ce5568b9f62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a703778a288bb9fbad5770ce5568b9f62">playerColors</a>&#160;&#160;&#160;(<a class="el" href="global_8h.html#structcolors">colors</a>) { (<a class="el" href="global_8h.html#structcolor">color</a>) {229, 22, 22, 255}, (<a class="el" href="global_8h.html#structcolor">color</a>) {200, 20, 20, 255}, (<a class="el" href="global_8h.html#structcolor">color</a>) {168, 16, 16, 255} }</td></tr>
+<tr class="separator:a703778a288bb9fbad5770ce5568b9f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8570165edb8b4875d4161ce1f311c0b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a8570165edb8b4875d4161ce1f311c0b6">playerXAcceleration</a>&#160;&#160;&#160;0.00005</td></tr>
+<tr class="separator:a8570165edb8b4875d4161ce1f311c0b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Függvények</h2></td></tr>
+<tr class="memitem:af9a085e2f8bab2460a2b93ee1f560b67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#af9a085e2f8bab2460a2b93ee1f560b67">setDie</a> (bool newValue)</td></tr>
+<tr class="separator:af9a085e2f8bab2460a2b93ee1f560b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59db7399f5931387fa42b8685cbc137c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a59db7399f5931387fa42b8685cbc137c">isAlive</a> ()</td></tr>
+<tr class="separator:a59db7399f5931387fa42b8685cbc137c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b13896d24503f29dc9055e834057a67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a4b13896d24503f29dc9055e834057a67">updateText</a> (int newPoints)</td></tr>
+<tr class="separator:a4b13896d24503f29dc9055e834057a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabf81f91c384935a8b506ba978d594d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#aabf81f91c384935a8b506ba978d594d9">drawPointsText</a> ()</td></tr>
+<tr class="separator:aabf81f91c384935a8b506ba978d594d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a9664c78d10c46d69ccd0d594cb3a64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a7a9664c78d10c46d69ccd0d594cb3a64">setPlayerStartingPosition</a> (int x, int y)</td></tr>
+<tr class="separator:a7a9664c78d10c46d69ccd0d594cb3a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0629b8699207f86233fac79182de3480"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a0629b8699207f86233fac79182de3480">setPoints</a> (int newAmount)</td></tr>
+<tr class="separator:a0629b8699207f86233fac79182de3480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bfc3c1acea7211e0fc7494cf8ef4188"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a2bfc3c1acea7211e0fc7494cf8ef4188">getPoints</a> ()</td></tr>
+<tr class="separator:a2bfc3c1acea7211e0fc7494cf8ef4188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca84f87a63a3e6987f2e1c524f3c548"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a6ca84f87a63a3e6987f2e1c524f3c548">movePlayer</a> (unsigned char *<a class="el" href="global_8h.html#a93b818e69f906d9b72ead9babc219113">keys</a>, int deltaTime)</td></tr>
+<tr class="memdesc:a6ca84f87a63a3e6987f2e1c524f3c548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mozgatja a játékost a billentyű lenyomások alapján. Az ütközés érzékelés elég érdekes, megnézni, hogyha megváltoztatná a játékos helyzetét, akkor illegális pozicióba lenne-e, ha igen akkor pont annyira változtatja meg, hogy épp ne legyen illegális állapotban.  <a href="#a6ca84f87a63a3e6987f2e1c524f3c548">Részletek...</a><br /></td></tr>
+<tr class="separator:a6ca84f87a63a3e6987f2e1c524f3c548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f62e4eb7014e2cef0a2003a3b35028"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#af2f62e4eb7014e2cef0a2003a3b35028">shoot</a> (<a class="el" href="aux_s_d_l_8h.html#structmouse_pos">mousePos</a> <a class="el" href="aux_s_d_l_8c.html#ab410e6ed3a6f4a69d62551df8f0c87a6">mouse</a>)</td></tr>
+<tr class="separator:af2f62e4eb7014e2cef0a2003a3b35028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85fa04ca438585571cfeb5542dae0914"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a85fa04ca438585571cfeb5542dae0914">slowTime</a> (bool isEnabled)</td></tr>
+<tr class="separator:a85fa04ca438585571cfeb5542dae0914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae73902ac8e3fcdcb7cb46aa9919313aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="global_8h.html#structrender_object">renderObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#ae73902ac8e3fcdcb7cb46aa9919313aa">getPlayerRenderObject</a> ()</td></tr>
+<tr class="memdesc:ae73902ac8e3fcdcb7cb46aa9919313aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A rajzoláshoz kell, átadja a megfelelő adatokat.  <a href="#ae73902ac8e3fcdcb7cb46aa9919313aa">Részletek...</a><br /></td></tr>
+<tr class="separator:ae73902ac8e3fcdcb7cb46aa9919313aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a777f1f2a2f0095891310db834abd699f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a777f1f2a2f0095891310db834abd699f">getPlayerStats</a> (<a class="el" href="global_8h.html#structvector2_d">vector2D</a> *maxVelocity)</td></tr>
+<tr class="separator:a777f1f2a2f0095891310db834abd699f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Változók</h2></td></tr>
+<tr class="memitem:a562292049914bcab4501fb12d91c25be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="global_8h.html#structvector3_d">vector3D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a562292049914bcab4501fb12d91c25be">playerPosition</a></td></tr>
+<tr class="separator:a562292049914bcab4501fb12d91c25be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af33aad8f9e95f471c59fd148393c0fbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="global_8h.html#structvector2_d">vector2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#af33aad8f9e95f471c59fd148393c0fbe">playerVelocity</a></td></tr>
+<tr class="separator:af33aad8f9e95f471c59fd148393c0fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7c8df70f65c42a14d639fa912cd766"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a4b7c8df70f65c42a14d639fa912cd766">directionOfMovement</a> = 0</td></tr>
+<tr class="separator:a4b7c8df70f65c42a14d639fa912cd766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a057d4b25e40212a99e0d3601e2cdfa1e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a057d4b25e40212a99e0d3601e2cdfa1e">isJumping</a> = false</td></tr>
+<tr class="separator:a057d4b25e40212a99e0d3601e2cdfa1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c58b7dc11eed855b9022f01cdca948"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a33c58b7dc11eed855b9022f01cdca948">isFalling</a> = true</td></tr>
+<tr class="separator:a33c58b7dc11eed855b9022f01cdca948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d8d50481e69a9e9bc74678e84c06a04"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a6d8d50481e69a9e9bc74678e84c06a04">isDead</a> = false</td></tr>
+<tr class="separator:a6d8d50481e69a9e9bc74678e84c06a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7f8f4a4e39e09fdb5e9f02330ecabef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#af7f8f4a4e39e09fdb5e9f02330ecabef">points</a></td></tr>
+<tr class="separator:af7f8f4a4e39e09fdb5e9f02330ecabef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c5bd596fabb2d98c368e0e7d0a7d57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a89c5bd596fabb2d98c368e0e7d0a7d57">usedFrames</a> = 0</td></tr>
+<tr class="memdesc:a89c5bd596fabb2d98c368e0e7d0a7d57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Itt kezeli az időlassítással kapcsolatos teendőket, levon a pontszámból.  <a href="#a89c5bd596fabb2d98c368e0e7d0a7d57">Részletek...</a><br /></td></tr>
+<tr class="separator:a89c5bd596fabb2d98c368e0e7d0a7d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Makródefiníciók dokumentációja</h2>
+<a id="a703778a288bb9fbad5770ce5568b9f62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a703778a288bb9fbad5770ce5568b9f62">&#9670;&nbsp;</a></span>playerColors</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define playerColors&#160;&#160;&#160;(<a class="el" href="global_8h.html#structcolors">colors</a>) { (<a class="el" href="global_8h.html#structcolor">color</a>) {229, 22, 22, 255}, (<a class="el" href="global_8h.html#structcolor">color</a>) {200, 20, 20, 255}, (<a class="el" href="global_8h.html#structcolor">color</a>) {168, 16, 16, 255} }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Hasonló elven 3 féle árnyalat, mint a pályaelemeknél is. </p>
+
+</div>
+</div>
+<a id="a042365c8db183d565611a38fb1a0dcac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a042365c8db183d565611a38fb1a0dcac">&#9670;&nbsp;</a></span>playerMaxVelocity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define playerMaxVelocity&#160;&#160;&#160;(<a class="el" href="global_8h.html#structvector2_d">vector2D</a>) {0.0045, 0.03}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A max sebességet [m/ms] sehogy se tudja túllépni, a program nagyságrendekkel nagyobbakat nem is kezelne jól. </p>
+
+</div>
+</div>
+<a id="ab3789403bbd5560195cf71844b5b912e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3789403bbd5560195cf71844b5b912e">&#9670;&nbsp;</a></span>playerSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define playerSize&#160;&#160;&#160;(<a class="el" href="global_8h.html#structvector3_d">vector3D</a>) {0.4, 0.9, 0.25}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A játékos méretét reprezentáló térvektor [m]. </p>
+
+</div>
+</div>
+<a id="a8570165edb8b4875d4161ce1f311c0b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8570165edb8b4875d4161ce1f311c0b6">&#9670;&nbsp;</a></span>playerXAcceleration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define playerXAcceleration&#160;&#160;&#160;0.00005</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Mintha lenne surlódás/légellenállás, sok értelme nincs, de kicsit lágyabb lesz tőle a mozgás. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Függvények dokumentációja</h2>
+<a id="aabf81f91c384935a8b506ba978d594d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabf81f91c384935a8b506ba978d594d9">&#9670;&nbsp;</a></span>drawPointsText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawPointsText </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae73902ac8e3fcdcb7cb46aa9919313aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae73902ac8e3fcdcb7cb46aa9919313aa">&#9670;&nbsp;</a></span>getPlayerRenderObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="global_8h.html#structrender_object">renderObject</a> getPlayerRenderObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A rajzoláshoz kell, átadja a megfelelő adatokat. </p>
+
+</div>
+</div>
+<a id="a777f1f2a2f0095891310db834abd699f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a777f1f2a2f0095891310db834abd699f">&#9670;&nbsp;</a></span>getPlayerStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void getPlayerStats </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="global_8h.html#structvector2_d">vector2D</a> *&#160;</td>
+          <td class="paramname"><em>maxVelocity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2bfc3c1acea7211e0fc7494cf8ef4188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bfc3c1acea7211e0fc7494cf8ef4188">&#9670;&nbsp;</a></span>getPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getPoints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59db7399f5931387fa42b8685cbc137c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59db7399f5931387fa42b8685cbc137c">&#9670;&nbsp;</a></span>isAlive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isAlive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ca84f87a63a3e6987f2e1c524f3c548"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca84f87a63a3e6987f2e1c524f3c548">&#9670;&nbsp;</a></span>movePlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void movePlayer </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>keys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>deltaTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mozgatja a játékost a billentyű lenyomások alapján. Az ütközés érzékelés elég érdekes, megnézni, hogyha megváltoztatná a játékos helyzetét, akkor illegális pozicióba lenne-e, ha igen akkor pont annyira változtatja meg, hogy épp ne legyen illegális állapotban. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">billentyűzet</td><td></td></tr>
+    <tr><td class="paramname">ms</td><td>eltelt idő </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af9a085e2f8bab2460a2b93ee1f560b67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9a085e2f8bab2460a2b93ee1f560b67">&#9670;&nbsp;</a></span>setDie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setDie </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>newValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a9664c78d10c46d69ccd0d594cb3a64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a9664c78d10c46d69ccd0d594cb3a64">&#9670;&nbsp;</a></span>setPlayerStartingPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPlayerStartingPosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0629b8699207f86233fac79182de3480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0629b8699207f86233fac79182de3480">&#9670;&nbsp;</a></span>setPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setPoints </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>newAmount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2f62e4eb7014e2cef0a2003a3b35028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2f62e4eb7014e2cef0a2003a3b35028">&#9670;&nbsp;</a></span>shoot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void shoot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="aux_s_d_l_8h.html#structmouse_pos">mousePos</a>&#160;</td>
+          <td class="paramname"><em>mouse</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85fa04ca438585571cfeb5542dae0914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85fa04ca438585571cfeb5542dae0914">&#9670;&nbsp;</a></span>slowTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool slowTime </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isEnabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b13896d24503f29dc9055e834057a67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b13896d24503f29dc9055e834057a67">&#9670;&nbsp;</a></span>updateText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateText </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>newPoints</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Változók dokumentációja</h2>
+<a id="a4b7c8df70f65c42a14d639fa912cd766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7c8df70f65c42a14d639fa912cd766">&#9670;&nbsp;</a></span>directionOfMovement</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int directionOfMovement = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A mozgás iránya, lehet -1, 0, +1. </p>
+
+</div>
+</div>
+<a id="a6d8d50481e69a9e9bc74678e84c06a04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d8d50481e69a9e9bc74678e84c06a04">&#9670;&nbsp;</a></span>isDead</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isDead = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33c58b7dc11eed855b9022f01cdca948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33c58b7dc11eed855b9022f01cdca948">&#9670;&nbsp;</a></span>isFalling</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isFalling = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a057d4b25e40212a99e0d3601e2cdfa1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a057d4b25e40212a99e0d3601e2cdfa1e">&#9670;&nbsp;</a></span>isJumping</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isJumping = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a562292049914bcab4501fb12d91c25be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a562292049914bcab4501fb12d91c25be">&#9670;&nbsp;</a></span>playerPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="global_8h.html#structvector3_d">vector3D</a> playerPosition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A játékos helyvektora, 3d-s, mert nem z = 0 pozban van [m]. </p>
+
+</div>
+</div>
+<a id="af33aad8f9e95f471c59fd148393c0fbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af33aad8f9e95f471c59fd148393c0fbe">&#9670;&nbsp;</a></span>playerVelocity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="global_8h.html#structvector2_d">vector2D</a> playerVelocity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A játékos sebesség [m/ms], a delta time miatt szükség van rá. </p>
+
+</div>
+</div>
+<a id="af7f8f4a4e39e09fdb5e9f02330ecabef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7f8f4a4e39e09fdb5e9f02330ecabef">&#9670;&nbsp;</a></span>points</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int points</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Mennyi pontot gyűjtött eddig a játékos. Ez nőhet és gyökkenhet is, de mindig &gt;= 0. </p>
+
+</div>
+</div>
+<a id="a89c5bd596fabb2d98c368e0e7d0a7d57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89c5bd596fabb2d98c368e0e7d0a7d57">&#9670;&nbsp;</a></span>usedFrames</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int usedFrames = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Itt kezeli az időlassítással kapcsolatos teendőket, levon a pontszámból. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e05d7e2b1ecd646af5bb94391405f3b5.html">modules</a></li><li class="navelem"><a class="el" href="player_8c.html">player.c</a></li>
+    <li class="footer">Projekt: Platform játék Készült: Sun Dec 3 2017 21:11:22 Készítette: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

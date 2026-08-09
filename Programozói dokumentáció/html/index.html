@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Platform játék: Leírás</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Platform játék
+   </div>
+   <div id="projectbrief">3D-s megjelenítés, véletlenszerű pályagenerálás, jutalmazó játékélmény</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','Keresés');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('index.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Leírás </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="Röviden"></a>
+Röviden</h1>
+<p>Egy könnyed, egyszerűen megismerhető, mégis jutalmazó játékélményt nyújtó programot szerettem volna. </p>
+<h1><a class="anchor" id="Hosszabban"></a>
+Hosszabban</h1>
+<p>A játéktér 3D-s kockákból álló, dinamikus méretű, és véletlenszerűen generált. A játékosnak a generált akadályok tetején található jutalmakat kell gyűjtenie. Ezt természetesen repülő ellenségek nehezítik, akik meg is keresik a játékost. Nem csak az ellenségeket, hanem a pályát is lehet rombolni a karakter által lőtt lövedékekkel. A játékost segíti még az időlassítás lehetősége is. Persze egyik sincs ingyen, mindkét képesség használata a pontszám csökkenésével jár. A pontszám nem kerülhet nulla alá. A játék aktuális állása fájlba menthető és onnan be is tölthető. Ezen felül a program egy toplistát is tartalmaz a legjobb eredményekről. </p>
+<h1><a class="anchor" id="Érdekességek"></a>
+Érdekességek</h1>
+<ul>
+<li>Nem triviális a térbeli megjelenítés, a pálya generálás illetve a mentés tömörítésének eljárása. Ezeket bővebben kifejtve a megfelelő modulok függvényeinél lehet megtalálni. Röviden viszont itt is megmagyarázom őket. A 3D-s hatást egy kamera fizikai modelljével érem el. Általában nem ez a leggyorsabb megoldás, viszont a játék egyszerű grafikájából kifolyólag (kizárólag téglatestek vannak benne) itt nagyon jól beválik. Persze rengeteg optimalizálás kell hozzá, hogy hardveres gyorsítás nélkül, kizárólag a processzoron futva is élvezhetően gyors legyen. Ilyen optimalizálások a nem egyesével történő rajzolás; ha hasonló tulajdonságú kockák vannak egymás alatt, akkor azokat egy magas oszlopként rajzolja. Csak azokat az oldalakat rajzolja, amik valóban látszanak. Illetve értelemszerűen, csak azokat a kockákat rajzolja, amelyikek látszanak. Ezen felül a rajzolás sorrendje is igencsak érdekes kihívást tár elénk, de erről már csak a <a class="el" href="camera_8c.html">camera.c</a> modulban kerül szó.</li>
+<li>A pályagenerálás nem túl bonyolult, két részből áll. Előszőr a földszintet építi, ahol random magasságú oszlopok vannak, csak az van megszabva, hogy mekkora lehet két szomszédos oszlop közt a legnagyobb magasságkülönbség. A felső szint már érdekesebb. Ott vannak a platformok. A pályát x irányban kisebb egységekre osztjuk, minden egységben egy "oszlopot" építünk. Az oszlop alatt olyan platformokat értünk, amik közt a távolság olyan, hogy a játék aktuális fizikájával mindig legalább egy irányban tovább lehet haladni róluk. Igazából ennyi az egész.</li>
+<li>A tömörítés a három közül a legprimitívebb megoldás, viszont nincs szükségünk bonyolultabbra, ez is elégséges. Mivel a pályák nagyrésze igen repetitív, ezért a blockok is gyakran ismétlődnek, ezt az ismétlődést a: "(ismétlődés száma)block típusa" formában rögzítjük. Erről bővebben a save.c modulban. Fontos megjegyezni, hogy a játék nincsen felkészítve a fájljaiba való külső beavatkozásra, tehát ezt igyekezzünk elkerülni. </li>
+</ul>
+<h1><a class="anchor" id="Modulok"></a>
+Modulok</h1>
+<ul>
+<li><a class="el" href="camera_8c.html">camera.c</a>: minden, ami 3d-s megjelenítéssel kapcsolatos</li>
+<li><a class="el" href="map_8c.html">map.c</a>: minden, ami a pálya generálásával és ütközésteszteléssel kapcsolatos</li>
+<li><a class="el" href="floaters_8c.html">floaters.c</a>: ellenségek, lövedékek</li>
+<li><a class="el" href="particles_8c.html">particles.c</a>: hóeséssel kapcsolatos függvények és tömbök</li>
+<li><a class="el" href="player_8c.html">player.c</a>: nagyrészt a player mozgásáért felelős</li>
+<li><a class="el" href="saves_8c.html">saves.c</a>: mentés, betöltés, mentés fájlok kezelése</li>
+<li><a class="el" href="world_8c.html">world.c</a>: meghívja a világ létrehozásához szükséges függvényeket</li>
+<li><a class="el" href="color_8c.html">color.c</a>: a pálya színei itt készülnek (HSL -&gt; RGB átalakítás is van itt)</li>
+<li><a class="el" href="menu_f_s_m_8c.html">menuFSM.c</a>: a játékban és a menüben történő inputra reagál elsősorban, itt zajlanak az állapotátmenetek</li>
+<li><a class="el" href="menu_draw_8c.html">menuDraw.c</a>: a menüt rajzolja le, illetve meghívja a játéktér rajzolását is, ha szükséges</li>
+<li><a class="el" href="unicode_print_8c.html">unicodePrint.c</a>: a név sugallja, az unicode szövegek kezelése és megjelenítése a feladata</li>
+<li><a class="el" href="aux_s_d_l_8c.html">auxSDL.c</a>: a megfelelő sdl-es függvények meghívása, illetve az egér interakciók kezelése</li>
+<li><a class="el" href="aux_functions_8c.html">auxFunctions.c</a>: gyakran használ inline függvények </li>
+</ul>
+<h1><a class="anchor" id="Kompatibilitás"></a>
+Kompatibilitás</h1>
+<p>A program lefordításához szükséges az SDL.h, SDL_ttf.h, illetve SDL_gfxPrimitives.h könyvtárak. Nincs tesztelve, viszont valószínűleg az SDL 1.2 által platformokon működőképes az alkalmazás. A játék fix FPS-sel fut, ez jelenleg 50-re van beállítva, így átlagos teljesítményű gépeken is el kell futnia, viszont ehhez szükség van egy átlagos képességű gépre, szóval ez egy lényeges rendszerkövetelmény. A játék működéséhez szükségesek a megfelelő ttf-fájlok. </p>
+<h1><a class="anchor" id="Készítette"></a>
+Készítette</h1>
+<p>Schmelczer András, 2017. 12. 03. </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Projekt: Platform játék Készült: Sun Dec 3 2017 21:11:23 Készítette: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

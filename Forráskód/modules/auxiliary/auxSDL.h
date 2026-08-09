@@ -1,0 +1,20 @@
+#ifndef AUXSDL_H_INCLUDED
+#define AUXSDL_H_INCLUDED
+
+    #include "../global.h"
+    #include "unicodePrint.h"
+
+    #define mouseSize 20    /**< Az egérmutató négyzetnek az oldalhosszusága. */
+
+    typedef struct mousePos {
+        Uint16 x, y;
+    } mousePos;
+
+    SDL_Cursor* openWindow();
+    Uint32 timer(Uint32 ms, void* param);
+    void setMousePosition(Uint16 x, Uint16 y);
+    mousePos getMousePosition();
+    void drawMouse(bool isBW);
+    bool isMouseOverRect(int xCenter, int yCenter, int xSize, int ySize);
+
+#endif // AUXSDL_H_INCLUDED

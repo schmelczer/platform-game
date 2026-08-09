@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Platform játék: menuFSM.c fájlreferencia</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Platform játék
+   </div>
+   <div id="projectbrief">3D-s megjelenítés, véletlenszerű pályagenerálás, jutalmazó játékélmény</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','Keresés');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('menu_f_s_m_8c.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Függvények</a> &#124;
+<a href="#var-members">Változók</a>  </div>
+  <div class="headertitle">
+<div class="title">menuFSM.c fájlreferencia</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="menu_f_s_m_8h_source.html">menuFSM.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Függvények</h2></td></tr>
+<tr class="memitem:a897c918d650e8d1c77068aa2badfa846"><td class="memItemLeft" align="right" valign="top"><a class="el" href="menu_draw_8h.html#aa19be6305a5a4485e1e70de70ed7d677">states</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#a897c918d650e8d1c77068aa2badfa846">getGameState</a> ()</td></tr>
+<tr class="memdesc:a897c918d650e8d1c77068aa2badfa846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visszaadja a jelenlegi állapotot, a quit-hez kell a mainnek.  <a href="#a897c918d650e8d1c77068aa2badfa846">Részletek...</a><br /></td></tr>
+<tr class="separator:a897c918d650e8d1c77068aa2badfa846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef247bc08a77ae02ca268d61795ebabf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#aef247bc08a77ae02ca268d61795ebabf">handleClicks</a> (bool *<a class="el" href="main_8c.html#a9fb4af630f09066d2e8d39980fd54fe2">prematureClick</a>)</td></tr>
+<tr class="memdesc:aef247bc08a77ae02ca268d61795ebabf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minden állapothoz tartozó kattintós eventet kezel, a beállítások menü miatt kell a prematureClick, hogy a belépést ne érzékelje beállításmódosításnak.  <a href="#aef247bc08a77ae02ca268d61795ebabf">Részletek...</a><br /></td></tr>
+<tr class="separator:aef247bc08a77ae02ca268d61795ebabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5be240d5e4518f8b30d10c07379f6ee2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#a5be240d5e4518f8b30d10c07379f6ee2">doStuff</a> (bool <a class="el" href="main_8c.html#a387c4d95abf30f945c3ca59321fa1891">isLMBDown</a>, bool <a class="el" href="main_8c.html#ad76055c42a9c5985110c095871a2a9c3">isRMBDown</a>, bool <a class="el" href="main_8c.html#a9fb4af630f09066d2e8d39980fd54fe2">prematureClick</a>)</td></tr>
+<tr class="memdesc:a5be240d5e4518f8b30d10c07379f6ee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ez igenis egy kifejező függyvény név. Az állapothoz megfelelő műveletek elvéűgzése, és a kimenet létrehozása. Tehát ha a játék magától csinál valamit, azt itt csinálja. Ez az egész egy nagy állapotgép. Igazából a mainben is lehetne, de szerintem így szebben néz ki.  <a href="#a5be240d5e4518f8b30d10c07379f6ee2">Részletek...</a><br /></td></tr>
+<tr class="separator:a5be240d5e4518f8b30d10c07379f6ee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b6f6da91f0abb7d89a25813a89199ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#a6b6f6da91f0abb7d89a25813a89199ff">whatToDoOnEscape</a> ()</td></tr>
+<tr class="memdesc:a6b6f6da91f0abb7d89a25813a89199ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Az ESC billenytű lenyomását kezeli.  <a href="#a6b6f6da91f0abb7d89a25813a89199ff">Részletek...</a><br /></td></tr>
+<tr class="separator:a6b6f6da91f0abb7d89a25813a89199ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8898c38d04a31c4280cbee9cc296a18c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#a8898c38d04a31c4280cbee9cc296a18c">processTyping</a> (SDL_Event event)</td></tr>
+<tr class="memdesc:a8898c38d04a31c4280cbee9cc296a18c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A szöveges bemenetet továbbítja egy Uint16-os stringbe.  <a href="#a8898c38d04a31c4280cbee9cc296a18c">Részletek...</a><br /></td></tr>
+<tr class="separator:a8898c38d04a31c4280cbee9cc296a18c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Változók</h2></td></tr>
+<tr class="memitem:a46ef12c56ad3bb8fba396edaa0a1ef4a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#a46ef12c56ad3bb8fba396edaa0a1ef4a">currentOptions</a> [] = {2000, 2000, 3, 450, 6000}</td></tr>
+<tr class="separator:a46ef12c56ad3bb8fba396edaa0a1ef4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab33df6112252776883e731149a215cf4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#ab33df6112252776883e731149a215cf4">currentSpawnRate</a></td></tr>
+<tr class="separator:ab33df6112252776883e731149a215cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a0ed01aaef1e1a647aad34909bdba5a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#a5a0ed01aaef1e1a647aad34909bdba5a">fadeStartTime</a></td></tr>
+<tr class="separator:a5a0ed01aaef1e1a647aad34909bdba5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeda1fc5c02ff3c855b3b145567058cb9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#aeda1fc5c02ff3c855b3b145567058cb9">elapsedTime</a> = 0</td></tr>
+<tr class="separator:aeda1fc5c02ff3c855b3b145567058cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30ca612a05e867225697c6454e64ef33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#a30ca612a05e867225697c6454e64ef33">nameIndex</a> = 0</td></tr>
+<tr class="separator:a30ca612a05e867225697c6454e64ef33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af64835b2845cef6a34469ce0b6b68c82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#af64835b2845cef6a34469ce0b6b68c82">cursorBlinking</a> = 0</td></tr>
+<tr class="separator:af64835b2845cef6a34469ce0b6b68c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fb4af630f09066d2e8d39980fd54fe2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#a9fb4af630f09066d2e8d39980fd54fe2">prematureClick</a></td></tr>
+<tr class="separator:a9fb4af630f09066d2e8d39980fd54fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a699225d4134974dbd4198b280ed7d75a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#a699225d4134974dbd4198b280ed7d75a">isDollying</a></td></tr>
+<tr class="separator:a699225d4134974dbd4198b280ed7d75a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b5b47365a61657709e0d5a9ab65d13f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#a5b5b47365a61657709e0d5a9ab65d13f">saved</a> = false</td></tr>
+<tr class="separator:a5b5b47365a61657709e0d5a9ab65d13f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c91b17bc5f8c014b04f194d8f95a401"><td class="memItemLeft" align="right" valign="top">Uint16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#a8c91b17bc5f8c014b04f194d8f95a401">name</a> [100] = {0}</td></tr>
+<tr class="separator:a8c91b17bc5f8c014b04f194d8f95a401"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ba384045fde00bff3ca1b5a156345d"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#a09ba384045fde00bff3ca1b5a156345d">topList</a></td></tr>
+<tr class="separator:a09ba384045fde00bff3ca1b5a156345d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a224c7c818922d8e0ed2353cdbb3a87e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="menu_draw_8h.html#aa19be6305a5a4485e1e70de70ed7d677">states</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_f_s_m_8c.html#a224c7c818922d8e0ed2353cdbb3a87e2">gameState</a> = <a class="el" href="menu_draw_8h.html#aa19be6305a5a4485e1e70de70ed7d677a3766dca84536a644e2f680f520e63180">mainMenu</a></td></tr>
+<tr class="separator:a224c7c818922d8e0ed2353cdbb3a87e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Függvények dokumentációja</h2>
+<a id="a5be240d5e4518f8b30d10c07379f6ee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5be240d5e4518f8b30d10c07379f6ee2">&#9670;&nbsp;</a></span>doStuff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void doStuff </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isLMBDown</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isRMBDown</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>prematureClick</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ez igenis egy kifejező függyvény név. Az állapothoz megfelelő műveletek elvéűgzése, és a kimenet létrehozása. Tehát ha a játék magától csinál valamit, azt itt csinálja. Ez az egész egy nagy állapotgép. Igazából a mainben is lehetne, de szerintem így szebben néz ki. </p>
+<dl class="params"><dt>Paraméterek</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">egérgomb</td><td>bal </td></tr>
+    <tr><td class="paramname">egérgomb</td><td>jobb </td></tr>
+    <tr><td class="paramname">prematureClick</td><td>a beállítás menünek A deltaTime a menüben kisebb, mint máshol, így egyszerűbben meg leeht oldani a hóesés lassítását. Amúgy az egész játék deltaTimera épült, ha c-ben megbízhatóan lehetne miliseces pontossággal lehetne időt mérni, akkor az FPS sokkal dinamikusabb lehetne (a jelenlegi fix 50-hez képest). Ilyet viszont nem lehet, de azért benne hagytam, egyrészről a menü miatt, másrészről az időlassítás miatt, meg esetleg azért is, mert később, más környezetben még lehet jól jön ez a megoldás. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a897c918d650e8d1c77068aa2badfa846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a897c918d650e8d1c77068aa2badfa846">&#9670;&nbsp;</a></span>getGameState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="menu_draw_8h.html#aa19be6305a5a4485e1e70de70ed7d677">states</a> getGameState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Visszaadja a jelenlegi állapotot, a quit-hez kell a mainnek. </p>
+
+</div>
+</div>
+<a id="aef247bc08a77ae02ca268d61795ebabf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef247bc08a77ae02ca268d61795ebabf">&#9670;&nbsp;</a></span>handleClicks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handleClicks </td>
+          <td>(</td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>prematureClick</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minden állapothoz tartozó kattintós eventet kezel, a beállítások menü miatt kell a prematureClick, hogy a belépést ne érzékelje beállításmódosításnak. </p>
+
+</div>
+</div>
+<a id="a8898c38d04a31c4280cbee9cc296a18c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8898c38d04a31c4280cbee9cc296a18c">&#9670;&nbsp;</a></span>processTyping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void processTyping </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Event&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A szöveges bemenetet továbbítja egy Uint16-os stringbe. </p>
+
+</div>
+</div>
+<a id="a6b6f6da91f0abb7d89a25813a89199ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b6f6da91f0abb7d89a25813a89199ff">&#9670;&nbsp;</a></span>whatToDoOnEscape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void whatToDoOnEscape </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Az ESC billenytű lenyomását kezeli. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Változók dokumentációja</h2>
+<a id="a46ef12c56ad3bb8fba396edaa0a1ef4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46ef12c56ad3bb8fba396edaa0a1ef4a">&#9670;&nbsp;</a></span>currentOptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int currentOptions[] = {2000, 2000, 3, 450, 6000}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab33df6112252776883e731149a215cf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab33df6112252776883e731149a215cf4">&#9670;&nbsp;</a></span>currentSpawnRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int currentSpawnRate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af64835b2845cef6a34469ce0b6b68c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af64835b2845cef6a34469ce0b6b68c82">&#9670;&nbsp;</a></span>cursorBlinking</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cursorBlinking = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeda1fc5c02ff3c855b3b145567058cb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeda1fc5c02ff3c855b3b145567058cb9">&#9670;&nbsp;</a></span>elapsedTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int elapsedTime = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a0ed01aaef1e1a647aad34909bdba5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a0ed01aaef1e1a647aad34909bdba5a">&#9670;&nbsp;</a></span>fadeStartTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fadeStartTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a224c7c818922d8e0ed2353cdbb3a87e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a224c7c818922d8e0ed2353cdbb3a87e2">&#9670;&nbsp;</a></span>gameState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="menu_draw_8h.html#aa19be6305a5a4485e1e70de70ed7d677">states</a> gameState = <a class="el" href="menu_draw_8h.html#aa19be6305a5a4485e1e70de70ed7d677a3766dca84536a644e2f680f520e63180">mainMenu</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Kezdőállapot. </p>
+
+</div>
+</div>
+<a id="a699225d4134974dbd4198b280ed7d75a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a699225d4134974dbd4198b280ed7d75a">&#9670;&nbsp;</a></span>isDollying</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isDollying</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c91b17bc5f8c014b04f194d8f95a401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c91b17bc5f8c014b04f194d8f95a401">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Uint16 name[100] = {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30ca612a05e867225697c6454e64ef33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30ca612a05e867225697c6454e64ef33">&#9670;&nbsp;</a></span>nameIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int nameIndex = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9fb4af630f09066d2e8d39980fd54fe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fb4af630f09066d2e8d39980fd54fe2">&#9670;&nbsp;</a></span>prematureClick</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool prematureClick</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b5b47365a61657709e0d5a9ab65d13f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b5b47365a61657709e0d5a9ab65d13f">&#9670;&nbsp;</a></span>saved</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool saved = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09ba384045fde00bff3ca1b5a156345d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09ba384045fde00bff3ca1b5a156345d">&#9670;&nbsp;</a></span>topList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* topList</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_e05d7e2b1ecd646af5bb94391405f3b5.html">modules</a></li><li class="navelem"><a class="el" href="dir_60d0f3a713512b03ae86416f073f3450.html">menu</a></li><li class="navelem"><a class="el" href="menu_f_s_m_8c.html">menuFSM.c</a></li>
+    <li class="footer">Projekt: Platform játék Készült: Sun Dec 3 2017 21:11:22 Készítette: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

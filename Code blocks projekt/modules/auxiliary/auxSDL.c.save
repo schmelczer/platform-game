@@ -1,0 +1,80 @@
+#include "auxSDL.h"
+
+mousePos mouse; /**< Az egér koordinátáit tárolja, így egyszerűbb, mint közvetlen az eventek figyelése. */
+
+
+/** \brief https://www.libsdl.org/release/SDL-1.2.15/docs/html/sdlcreatecursor.html
+ * Hogy erre miért van szükség, az egy nagyon jó kérdés. Ha ehelyett a "SDL_ShowCursor(SDL_DISABLE);"-t
+ * használnám az egér random ugrálna néha néha, így viszont ezt nem teszi.
+ */
+static SDL_Cursor* createCursor() {
+  Uint8 data[4*32] = {0};
+  Uint8 mask[4*32] = {0};
+  return SDL_CreateCursor(data, mask, 32, 32, 0, 0);
+}
+
+/** \brief Létrehozza a játék futtatásához szükséges környezetet.
+ * Megnézi az elérhető legnagyobb felbontást, azzal a felbontással létrehoz egy ablakot, illetve
+ * meghív pár, az inicializáláshoz szükséges függvényt.
+ * \return kurzor amit fel kell később szabadítanunk
+ */
+SDL_Cursor* openWindow() {
+    SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER);
+    SDL_Rect** screenSizes = SDL_ListModes(NULL, SDL_FULLSCREEN);
+
+    screen = SDL_SetVideoMode(screenSizes[0] -> w, screenSizes[0] -> h, 0, SDL_FULLSCREEN);
+
+    if (!screen) {
+        fprintf(stderr, "Nem sikerult megnyitni az ablakot!\n");
+        exit(1);
+    }
+
+    SDL_WM_SetCaption("Platform játék", "Schmelczer András: Platform játék");
+    SDL_Cursor* cursor = createCursor();
+    SDL_SetCursor(cursor);
+    openFonts();
+    SDL_WM_GrabInput(SDL_GRAB_FULLSCREEN);
+    return cursor;
+}
+
+///A játék időzítéséhez szükséges.
+Uint32 timer(Uint32 ms, void* param) {
+    SDL_Event event;
+    event.type = SDL_USEREVENT;
+    SDL_PushEvent(&event);
+    return ms;
+}
+
+///Frissití az egér pozicióját.
+void setMousePosition(Uint16 x, Uint16 y) {
+    mouse.x = x;
+    mouse.y = y;
+}
+
+///Visszaadja az egérpoziciót.
+mousePos getMousePosition() {
+    return mouse;
+}
+
+///Lerajzolja a képernyőre az egeret, erre azért van szükség, mert az SDL csak fekete-fehér egérmutatót kezel.
+void drawMouse(bool isBW) {
+    Sint16 x1 = mouse.x - mouseSize / 2;
+    Sint16 x2 = mouse.x + mouseSize / 2;
+    Sint16 y1 = mouse.y - mouseSize / 2;
+    Sint16 y2 = mouse.y + mouseSize / 2;
+    boxColor(screen, x1, y1, x2, y2, isBW ? 0x7F7F7FFF : 0xFFFF00FF);
+}
+
+bool isMouseOver(int yStart, int ySize, int y) {
+
+    return
+        (float) screen -> h / 100 * (yStart + (y - 0.5) * ySize) < mouse.y &&
+        mouse.y < (float) screen -> h / 100 * (yStart + (y + 0.5) * ySize);
+}
+
+///Egy téglalap felett van-e az egérmutató közepe?
+bool isMouseOverRect(int xCenter, int yCenter, int xSize, int ySize) {
+    return
+        screen -> w / 100.0 * (xCenter - xSize) < mouse.x && mouse.x < screen -> w / 100.0 * (xCenter + xSize) &&
+        screen -> h / 100.0 * (yCenter - ySize) < mouse.y && mouse.y < screen -> h / 100.0 * (yCenter + ySize);
+}
