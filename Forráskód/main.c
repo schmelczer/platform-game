@@ -1,6 +1,10 @@
 #include <time.h>
 #include <string.h>
 
+#ifdef __EMSCRIPTEN__
+    #include <emscripten.h>
+#endif
+
 #include "modules/global.h"
 #include "modules/camera.h"
 #include "modules/color.h"
@@ -55,8 +59,8 @@
  * - auxSDL.c: a megfelelő sdl-es függvények meghívása, illetve az egér interakciók kezelése
  * - auxFunctions.c: gyakran használ inline függvények
  * \section Kompatibilitás
- * A program lefordításához szükséges az SDL.h, SDL_ttf.h, illetve SDL_gfxPrimitives.h könyvtárak. Nincs tesztelve, viszont valószínűleg
- * az SDL 1.2 által platformokon működőképes az alkalmazás. A játék fix FPS-sel fut, ez jelenleg 50-re van beállítva, így átlagos teljesítményű gépeken is
+ * A program lefordításához szükséges az SDL2 és az SDL2_ttf könyvtár, a rajzoló primitíveket a program magával hozza.
+ * Natívan és Emscriptennel webre fordítva is működik. A játék fix FPS-sel fut, ez jelenleg 50-re van beállítva, így átlagos teljesítményű gépeken is
  * el kell futnia, viszont ehhez szükség van egy átlagos képességű gépre, szóval ez egy lényeges rendszerkövetelmény.
  * A játék működéséhez szükségesek a megfelelő ttf-fájlok.
  * \section Készítette
@@ -71,30 +75,21 @@
 
 bool isLMBDown = false, isRMBDown = false, prematureClick;
 
-int main(int argc, char *argv[]) {
+static Uint32 backgroundColor;
+static Uint32 previousTicks;
+static double accumulator = 0;
+static bool quitRequested = false;
 
-    srand(time(NULL));
-    SDL_Cursor* cursor = openWindow();
+static void handleEvents() {
     SDL_Event event;
-    SDL_TimerID timerID;
-    timerID = SDL_AddTimer((int)(1000.0 / FPS), timer, NULL);
-    keys = SDL_GetKeyState(NULL);
-    //setlocale(0, "");
 
-    Uint32 backgroundColor = SDL_MapRGB(screen -> format, 40, 0, 0);
-
-    createMenuWorld();
-
-    while (getGameState() != quit) {
-        SDL_WaitEvent(&event);
-
+    while(SDL_PollEvent(&event)) {
         switch(event.type) {
-            case SDL_USEREVENT:
+            case SDL_QUIT:
 
-                SDL_FillRect(screen, NULL, backgroundColor);
-                doStuff(isLMBDown, isRMBDown, prematureClick);
-                SDL_UpdateRect(screen, 0, 0, 0, 0);
+                quitRequested = true;
                 break;
+
 
             case SDL_MOUSEBUTTONDOWN:
 
@@ -116,12 +111,68 @@ int main(int argc, char *argv[]) {
 
             case SDL_KEYDOWN:
 
-                if(strcmp(SDL_GetKeyName(event.key.keysym.unicode), "escape") == 0) whatToDoOnEscape();
+                if(event.key.keysym.sym == SDLK_ESCAPE) whatToDoOnEscape();
                 else processTyping(event);
+                break;
+
+            case SDL_TEXTINPUT:
+
+                processTextInput(event.text.text);
                 break;
 
         }
     }
+}
+
+static void frame() {
+    const double step = 1000.0 / FPS;
+
+    handleEvents();
+    handleResize();
+
+    Uint32 now = SDL_GetTicks();
+    double elapsed = now - previousTicks;
+    previousTicks = now;
+    if(elapsed > 5 * step) elapsed = 5 * step;
+    accumulator += elapsed;
+
+    bool hasDrawn = false;
+    while(accumulator >= step) {
+        accumulator -= step;
+
+        bool isLastStep = accumulator < step;
+        setRenderingEnabled(isLastStep);
+
+        if(isLastStep) SDL_FillRect(screen, NULL, backgroundColor);
+        doStuff(isLMBDown, isRMBDown, prematureClick);
+        hasDrawn = hasDrawn || isLastStep;
+    }
+    setRenderingEnabled(true);
+
+    if(hasDrawn) presentFrame();
+#ifdef __EMSCRIPTEN__
+    if(getGameState() == quit || quitRequested) emscripten_cancel_main_loop();
+#else
+    if(!hasDrawn) SDL_Delay(1);
+#endif
+}
+
+int main(int argc, char *argv[]) {
+
+    srand(time(NULL));
+    openWindow();
+    keys = (unsigned char*) SDL_GetKeyboardState(NULL);
+    SDL_StartTextInput();
+
+    backgroundColor = SDL_MapRGB(screen -> format, 40, 0, 0);
+
+    createMenuWorld();
+    previousTicks = SDL_GetTicks();
+
+#ifdef __EMSCRIPTEN__
+    emscripten_set_main_loop(frame, 0, 1);
+#else
+    while(getGameState() != quit && !quitRequested) frame();
 
     //Felszabadítás
     freeFloaterList();
@@ -131,9 +182,9 @@ int main(int argc, char *argv[]) {
     freeParticleList();
     SDL_FreeSurface(text);
     freeFonts();
-    SDL_RemoveTimer(timerID);
-    SDL_FreeCursor(cursor);
+    closeWindow();
     SDL_Quit();
+#endif
 
     return 0;
 }

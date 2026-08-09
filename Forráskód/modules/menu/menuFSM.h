@@ -17,5 +17,6 @@
     void doStuff(bool isLMBDown, bool isRMBDown, bool prematureClick);
     void whatToDoOnEscape();
     void processTyping(SDL_Event event);
+    void processTextInput(const char* utf8);
 
 #endif // MENUFSM_H_INCLUDED

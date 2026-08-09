@@ -7,13 +7,15 @@ void getExistingSaveFiles(time_t ages[], int points[]) {
     char save[50];
     FILE* saveFile;
     while(saveID < maxNOSaves) {
-        sprintf(save, "saves\\game%d.save", saveID);
+        sprintf(save, "saves/game%d.save", saveID);
         saveFile = fopen(save, "r");
         if(saveFile != NULL) {
             existingSaves[saveID] = true;
             if(saveFile != NULL) {
                 if(ages != NULL) {
-                    fscanf(saveFile, "%ld,", &(ages[saveID]));
+                    long long savedTime = 0;
+                    fscanf(saveFile, "%lld,", &savedTime);
+                    ages[saveID] = (time_t) savedTime;
                     int i;
                     for(i = 0; i < 8; i++)
                         fscanf(saveFile, "%d,", &(points[saveID]));
@@ -29,7 +31,7 @@ void getExistingSaveFiles(time_t ages[], int points[]) {
 ///Mentés törlése (fizikálisan).
 void deleteSave(int i) {
     char save[50];
-    sprintf(save, "saves\\game%d.save", i);
+    sprintf(save, "saves/game%d.save", i);
     remove(save);
 }
 
@@ -48,12 +50,12 @@ void saveGame(int currentOptions[]) {
     int i;
     for(i = 0; i < maxNOSaves - 1 && existingSaves[i]; i++)
         ;
-    sprintf(saveName, "saves\\game%d.save", i);
+    sprintf(saveName, "saves/game%d.save", i);
     FILE* save = fopen(saveName, "w");
 
     block** map = getMap();
 
-    fprintf(save, "%ld,", time(NULL));
+    fprintf(save, "%lld,", (long long) time(NULL));
     for(i = 0; i < 5; i++)
         fprintf(save, "%d,", currentOptions[i]);
 
@@ -82,13 +84,13 @@ void saveGame(int currentOptions[]) {
                 bufferIndex += strlen(temp);
             }
             if(bufferIndex > bufferSize - 20) {
-                fprintf(save, buffer);
+                fprintf(save, "%s", buffer);
                 bufferIndex = 0;
             }
         }
     }
     if(bufferIndex != 0)
-        fprintf(save, buffer);
+        fprintf(save, "%s", buffer);
     free(buffer);
 
     fclose(save);
@@ -97,12 +99,12 @@ void saveGame(int currentOptions[]) {
 ///Fájlból betölti a játékot, a világot is előkészíti. A mentésnél használt tömörítést dekódolja. A betöltött játék beállítások felülírják az eddigieket.
 void loadGame(int currentOptions[], int saveID) {
     char saveName[50];
-    sprintf(saveName, "saves\\game%d.save", saveID);
+    sprintf(saveName, "saves/game%d.save", saveID);
 
     FILE* save = fopen(saveName, "r");
 
-    time_t tmpT;
-    fscanf(save, "%ld,", &tmpT);
+    long long tmpT;
+    fscanf(save, "%lld,", &tmpT);
 
     int i;
     for(i = 0; i < 5; i++)

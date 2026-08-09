@@ -90,6 +90,11 @@ static void calculateRowsAndColumns() {
         }
 }
 
+///A képernyő méretének változása után újraszámolja a látható területet és átméretezi a darabolós mátrixot.
+void refreshCameraForScreen() {
+    calculateRowsAndColumns();
+}
+
 ///A játékost követi a kamerával, nem hagyja, hogy a pálya alá lásson.
 void followPlayerWithCamera() {
     renderObject player = getPlayerRenderObject();

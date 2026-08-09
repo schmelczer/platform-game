@@ -1,0 +1,71 @@
+name: Build & deploy web version
+
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main']
+  workflow_dispatch:
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build WebAssembly & deploy
+    runs-on: docker
+
+    env:
+      # Keep in sync with the version table in README.md.
+      EMSDK_VERSION: '6.0.6'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install cmake & friends
+        run: |
+          set -eo pipefail
+          SUDO=""
+          [ "$(id -u)" -eq 0 ] || SUDO="sudo"
+          $SUDO apt-get update
+          $SUDO apt-get install -y --no-install-recommends \
+            ca-certificates cmake git ninja-build python3 xz-utils
+          cmake --version
+
+      - name: Install Emscripten
+        run: |
+          set -eo pipefail
+          git clone --depth 1 https://github.com/emscripten-core/emsdk.git "$HOME/emsdk"
+          cd "$HOME/emsdk"
+          ./emsdk install "$EMSDK_VERSION"
+          ./emsdk activate "$EMSDK_VERSION"
+          . ./emsdk_env.sh
+          # emsdk_env.sh only touches this step's shell, so hand the activated
+          # toolchain over to the later steps explicitly.
+          {
+            echo "EMSDK=$EMSDK"
+            echo "EMSDK_NODE=$EMSDK_NODE"
+            echo "EM_CONFIG=${EM_CONFIG:-$EMSDK/.emscripten}"
+            echo "PATH=$PATH"
+          } >> "$GITHUB_ENV"
+
+      - name: Configure
+        run: emcmake cmake -S . -B build-web -G Ninja -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build
+        run: cmake --build build-web
+
+      - name: Check the expected files were produced
+        run: |
+          set -euo pipefail
+          for file in index.html index.js index.wasm index.data; do
+            test -s "build-web/web/$file" || { echo "hiányzik: $file"; exit 1; }
+          done
+
+      - name: Deploy to nginx pages mount
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: http://forgejo:3000/andras/ci-actions/deploy-pages@main
+        with:
+          source: build-web/web
+          target: platform-game

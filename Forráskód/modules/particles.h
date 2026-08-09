@@ -8,7 +8,7 @@
     typedef struct particle {
         //y, z
         vector2D position;
-        //mert kock·k
+        //mert kock√°k
         float size;
         float velocity;
     } particle;

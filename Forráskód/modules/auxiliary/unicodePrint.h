@@ -9,8 +9,11 @@
 
     void openFonts();
     void freeFonts();
-    bool isValidChar(Uint16 chr);
-    Uint16* concatUnicode(const Uint16 a[], const Uint16 b[]);
-    void unicodePrintCentered(Uint16 textToWrite[], int x, int y, fontType fontType);
+    bool isValidChar(wchar_t chr);
+    wchar_t* concatUnicode(const wchar_t a[], const wchar_t b[]);
+    void unicodePrintCentered(wchar_t textToWrite[], int x, int y, fontType fontType);
+    void utf8PrintCentered(const char* textToWrite, int x, int y, fontType fontType);
+    int wideToUtf8(const wchar_t* source, char* destination, int destinationSize);
+    int utf8ToWide(const char* source, wchar_t* destination, int destinationSize);
 
 #endif // UNICODEPRINT_H_INCLUDED

@@ -13,6 +13,7 @@
     #define cameraDollyTime 3250            /**<[ms]*/
 
     void freeRenderMap();
+    void refreshCameraForScreen();
     void followPlayerWithCamera();
     void menuCamera(int* getColumns, int* getRows);
     int getColumns();

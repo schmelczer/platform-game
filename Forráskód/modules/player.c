@@ -10,7 +10,7 @@ vector2D playerVelocity;        /**< A játékos sebesség [m/ms], a delta time 
 int directionOfMovement = 0;    /**< A mozgás iránya, lehet -1, 0, +1. */
 bool isJumping = false, isFalling = true;
 bool isDead = false;
-int points;                     /**< Mennyi pontot gyűjtött eddig a játékos. Ez nőhet és gyökkenhet is, de mindig >= 0. */
+static int points;              /**< Mennyi pontot gyűjtött eddig a játékos. Ez nőhet és gyökkenhet is, de mindig >= 0. */
 
 
 void setDie(bool newValue) {
@@ -29,6 +29,7 @@ void updateText(int newPoints) {
 }
 
 void drawPointsText() {
+    if(!isRenderingEnabled()) return;
     SDL_BlitSurface(text, NULL, screen, &(SDL_Rect){50, 30, 0, 0});
 }
 
@@ -56,9 +57,9 @@ int getPoints() {
 void movePlayer(unsigned char* keys, int deltaTime) {
 
     //nem a legszebb, de a rövidségtől szép lesz.
-    directionOfMovement = (keys[SDLK_d] || keys[SDLK_RIGHT]) - (keys[SDLK_a] || keys[SDLK_LEFT]);
+    directionOfMovement = (keys[SDL_SCANCODE_D] || keys[SDL_SCANCODE_RIGHT]) - (keys[SDL_SCANCODE_A] || keys[SDL_SCANCODE_LEFT]);
 
-    isJumping = keys[SDLK_w] || keys[SDLK_UP] || keys[SDLK_SPACE];
+    isJumping = keys[SDL_SCANCODE_W] || keys[SDL_SCANCODE_UP] || keys[SDL_SCANCODE_SPACE];
     //<\input feldolgozása>
     //<sebesség kiszámítása>
     if(directionOfMovement != 0) {

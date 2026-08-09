@@ -10,7 +10,7 @@
     #define bufferSize 64000        /**< A mentéshez használ buffer mérete [byte]. */
 
 
-    bool existingSaves[maxNOSaves]; /**< Igaz, ha a save slot üres. */
+    extern bool existingSaves[maxNOSaves]; /**< Igaz, ha a save slot üres. */
 
     void getExistingSaveFiles(time_t ages[], int points[]);
     void deleteSave(int i);

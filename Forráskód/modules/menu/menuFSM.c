@@ -4,8 +4,8 @@
 int currentOptions[] = {2000, 2000, 3, 450, 6000};
 int currentSpawnRate, fadeStartTime, elapsedTime = 0, nameIndex = 0, cursorBlinking = 0;
 
-bool prematureClick, isDollying, saved = false;
-Uint16 name[100] = {0};
+bool isDollying, saved = false;
+wchar_t name[100] = {0};
 FILE* topList;
 
 states gameState = mainMenu;        /**< Kezdőállapot. */
@@ -39,9 +39,6 @@ void handleClicks(bool* prematureClick) {
             }
             else if(isMouseOverRect(50, menuStart + menuTav*4, 15, menuTav / 2))
                 gameState = infoMenu;
-            else if(isMouseOverRect(50, menuStart + menuTav*5, 15, menuTav / 2)) {
-                gameState = quit;
-            }
             break;
         case pauseMenu:
             if(isMouseOverRect(50, menuStart - 5, 15, menuTav/2)) {
@@ -181,11 +178,10 @@ void doStuff(bool isLMBDown, bool isRMBDown, bool prematureClick) {
             boxRGBA(screen, 0, 0, screen -> w, screen -> h, 0, 0, 0, 255);
             cursorBlinking += deltaTime;
             if(cursorBlinking > 1000) cursorBlinking = 0;
-            Uint16 loseText[300];
-            swprintf(loseText, L"%ls vesztett, a pontszáma %d.", cursorBlinking > 500 ? L"|" : L"", getPoints());
-            Uint16* endText = concatUnicode(name, loseText);
-            unicodePrintCentered(endText, 50, 50, small);
-            free(endText);
+            char typedName[400], loseText[600];
+            wideToUtf8(name, typedName, sizeof(typedName));
+            snprintf(loseText, sizeof(loseText), "%s%s vesztett, a pontszáma %d.", typedName, cursorBlinking > 500 ? "|" : "", getPoints());
+            utf8PrintCentered(loseText, 50, 50, small);
             break;
     }
     if(isAlive()) drawMouse(isInSlowMo);
@@ -199,7 +195,9 @@ static void escapeFromNameInput() {
         createMenuWorld();
         topList = fopen("rang.lst", "a");
         if(topList != NULL) {
-            fwprintf(topList, L"%ls,%d\n", name[0] == 0 ? L"Névtelen" : name, getPoints());
+            char utf8[400];
+            wideToUtf8(name[0] == 0 ? L"Névtelen" : name, utf8, sizeof(utf8));
+            fprintf(topList, "%s,%d\n", utf8, getPoints());
             fclose(topList);
         }
     }
@@ -218,9 +216,6 @@ void whatToDoOnEscape() {
                 saved = false;
             }
             break;
-        case mainMenu:
-            gameState = quit;
-            break;
         case fading:
             gameState = nameInput;
             break;
@@ -233,13 +228,27 @@ void whatToDoOnEscape() {
     }
 }
 
-///A szöveges bemenetet továbbítja egy Uint16-os stringbe.
+///A szöveges bemenetet továbbítja egy wchar_t-os stringbe.
 void processTyping(SDL_Event event) {
     if(gameState  == nameInput) {
-        Uint16 chr = event.key.keysym.unicode;
-        if(strcmp(SDL_GetKeyName(chr), "backspace") == 0) name[--nameIndex] = 0;
-        else if(strcmp(SDL_GetKeyName(chr), "return") == 0) escapeFromNameInput();
-        else if(isValidChar(chr)) name[nameIndex++] = chr;
+        SDL_Keycode key = event.key.keysym.sym;
+        if(key == SDLK_BACKSPACE) { if(nameIndex > 0) name[--nameIndex] = 0; }
+        else if(key == SDLK_RETURN || key == SDLK_KP_ENTER) escapeFromNameInput();
+        name[nameIndex] = 0;
+    }
+}
+
+///A beírt karaktereket utf-8-ból átalakítva fűzi a névhez.
+void processTextInput(const char* utf8) {
+    if(gameState == nameInput) {
+        wchar_t typed[16];
+        int count = utf8ToWide(utf8, typed, sizeof(typed) / sizeof(wchar_t));
+
+        int i;
+        for(i = 0; i < count; i++)
+            if(isValidChar(typed[i]) && nameIndex < (int) (sizeof(name) / sizeof(wchar_t)) - 1)
+                name[nameIndex++] = typed[i];
+
         name[nameIndex] = 0;
     }
 }

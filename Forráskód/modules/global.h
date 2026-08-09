@@ -7,7 +7,7 @@
 
 #include <SDL.h>
 #include <SDL_ttf.h>
-#include <SDL_gfxPrimitives.h>
+#include "auxiliary/gfxPrimitives.h"
 
 #include "auxiliary/auxFunctions.h"
 
@@ -15,23 +15,24 @@
 #define GLOBAL_H_INCLUDED
 
 #define FPS (int) 50
+#define designHeight 1080   /**< Ehhez a magassÃ¡ghoz vannak mÃ©retezve a betÅ±tÃ­pusok. */
 
-float g;
+extern float g;
 
-///<Globális változók>
-SDL_Surface* screen;
-TTF_Font* fontSmaller;
-TTF_Font* fontSmall;
-TTF_Font* fontSmallBold;
-TTF_Font* fontLarge;
-SDL_Surface* text;
-unsigned char* keys;
-///</Globális változók>
+///<GlobÃ¡lis vÃ¡ltozÃ³k>
+extern SDL_Surface* screen;
+extern TTF_Font* fontSmaller;
+extern TTF_Font* fontSmall;
+extern TTF_Font* fontSmallBold;
+extern TTF_Font* fontLarge;
+extern SDL_Surface* text;
+extern unsigned char* keys;
+///</GlobÃ¡lis vÃ¡ltozÃ³k>
 
 
 ///<Vektorok>
 typedef struct vector2D {
-    //1 egység == 1m
+    //1 egysÃ©g == 1m
     float x, y;
 } vector2D;
 
@@ -40,13 +41,13 @@ typedef struct intVector2D {
 } intVector2D;
 
 typedef struct vector3D {
-    //1 egység == 1m
+    //1 egysÃ©g == 1m
     float x, y, z;
 } vector3D;
 ///</Vektorok>
 
 
-///<Színek>
+///<SzÃ­nek>
 typedef struct color {
     unsigned char r, g, b, a;
 } color;
@@ -54,7 +55,7 @@ typedef struct color {
 typedef struct colors {
     color light, normal, dark;
 } colors;
-///</Színek>
+///</SzÃ­nek>
 
 
 typedef enum block {

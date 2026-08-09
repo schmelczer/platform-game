@@ -11,13 +11,12 @@ static void drawMenuParticles(int deltaTime) {
 
 ///A főmenüt rajzolja.
 void drawMainMenu(int deltaTime) {
-    Uint16 menuOptions[][50] = {
+    wchar_t menuOptions[][50] = {
         L"Indítás",
         L"Betöltés",
         L"Beállítások",
         L"Ranglista",
         L"Leírás",
-        L"Kilépés",
         L""
     };
 
@@ -37,7 +36,7 @@ static inline void printBack() {
 
 ///A beállítások menüpont rajzolása, a beállításokat a betöltött mentések is befolyásolják. Figyelni kell, hogy a belépés kattintását ne érzékelje csúszka kattintásnak.
 void drawOptionsMenu(int deltaTime, int currentOptions[], bool click) {
-    Uint16 optionsMenuOptions[][50] = {
+    wchar_t optionsMenuOptions[][50] = {
         L"Világ szélessége",
         L"Világ magassága",
         L"Részecskék száma",
@@ -60,10 +59,10 @@ void drawOptionsMenu(int deltaTime, int currentOptions[], bool click) {
         );
 
         filledCircleColor(screen, (float) screen -> w / 100 * (30 + 0.4 * 100 * (float)(currentOptions[i] - minOptions[i]) / (maxOptions[i] - minOptions[i])),
-            (float) screen -> h / 100 * (optionsStart + i * optionsTav), 20, 0xFFFFFFFF
+            (float) screen -> h / 100 * (optionsStart + i * optionsTav), larger(4, 20 * screen -> h / designHeight), 0xFFFFFFFF
         );
         aacircleColor(screen, (float) screen -> w / 100 * (30 + 0.4 * 100 * (float)(currentOptions[i] - minOptions[i]) / (maxOptions[i] - minOptions[i])),
-           (float) screen -> h / 100 * (optionsStart + i * optionsTav), 20, 0xFFFFFFFF
+           (float) screen -> h / 100 * (optionsStart + i * optionsTav), larger(4, 20 * screen -> h / designHeight), 0xFFFFFFFF
         );
 
         i++;
@@ -84,7 +83,7 @@ void drawOptionsMenu(int deltaTime, int currentOptions[], bool click) {
 ///A játék leírását rajzolja meg.
 void drawInfoMenu(int deltaTime) {
 
-    Uint16 info[][150] = {
+    wchar_t info[][150] = {
         L"Ebben a játékban pontokat szerezni és költeni",
         L"is tudsz. Minden megtalált kék kockáért jár egy pont.",
         L"Mozogni a WAD billentyűk, szóköz, vagy a nyilak",
@@ -106,16 +105,16 @@ void drawInfoMenu(int deltaTime) {
     drawMenuParticles(deltaTime);
 }
 
-Uint16 names[topListItemsMax][100];
-int points[topListItemsMax];
-int namesIndex;
+static wchar_t names[topListItemsMax][100];
+static int points[topListItemsMax];
+static int namesIndex;
 
 ///Ha megtelt a toplista, rendezi, és az utolsó elemét lecseréli. A ranglista fájlt se kéne nagyon piszkálni a felhasználónak.
 static void sortTopList() {
 
     int i, j;
     int tmpInt;
-    Uint16 tmpStr[100];
+    wchar_t tmpStr[100];
 
     for(i = 0; i < namesIndex; i++) {
         int maxIndex = i;
@@ -140,23 +139,19 @@ void loadTopList() {
     int i;
 
     if(topList != NULL) {
+        char lineName[400];
         namesIndex = 0;
-        while(true) {
-            i = 0;
-            do {
-                if(fwscanf(topList, L"%lc", &names[namesIndex][i]) == 0) goto end;
-            }
-            while(names[namesIndex][i++] != L',');
-            names[namesIndex][i] = 0;
+        while(fscanf(topList, " %399[^,\n],%d", lineName, &points[namesIndex]) == 2) {
+            i = strlen(lineName);
+            lineName[i] = ',';
+            lineName[i + 1] = 0;
+            utf8ToWide(lineName, names[namesIndex], 100);
 
-            fwscanf(topList, L"%d", &points[namesIndex]);
-            fwscanf(topList, L"\n");
             if(namesIndex < topListItemsMax - 1) namesIndex++;
             else sortTopList();
         }
-        end:
-            sortTopList();
-            fclose(topList);
+        sortTopList();
+        fclose(topList);
     }
 }
 
@@ -164,9 +159,10 @@ void loadTopList() {
 void drawTopList(int deltaTime) {
     int i;
     for(i = 0; i < namesIndex; i++) {
-        Uint16 nameWScore[600];
-        swprintf(nameWScore, L"%ls %d", names[i], points[i]);
-        unicodePrintCentered(nameWScore, 50, 20 + ((i == 0) ?  0 : (i + 1)*infoTav), (i == 0) ? large : (i == 1) ? small : tiny);
+        char storedName[400], nameWScore[600];
+        wideToUtf8(names[i], storedName, sizeof(storedName));
+        snprintf(nameWScore, sizeof(nameWScore), "%s %d", storedName, points[i]);
+        utf8PrintCentered(nameWScore, 50, 20 + ((i == 0) ?  0 : (i + 1)*infoTav), (i == 0) ? large : (i == 1) ? small : tiny);
     }
 
     printBack();
@@ -175,7 +171,7 @@ void drawTopList(int deltaTime) {
 
 ///Ha a játékos szüneteltei a játékot(ESC) ezt fogja látni. Elég drága az átlátszó box, szóval csak óvatosan a méretével.
 void drawPauseMenu(bool saved) {
-    Uint16 pauseOptions[][100] = {
+    wchar_t pauseOptions[][100] = {
         L"Játék folytatása",
         L"Pálya elmentése",
         L"Mentés betöltése",
@@ -201,14 +197,14 @@ void drawLoadMenu(int deltaTime) {
 
 
     int i;
-    Uint16 timeStrings[][50] = {
-        L"másodperccel",
-        L"perccel",
-        L"órával",
-        L"nappal",
-        L"héttel",
-        L"hónappal",
-        L"évvel"
+    const char* timeStrings[] = {
+        "másodperccel",
+        "perccel",
+        "órával",
+        "nappal",
+        "héttel",
+        "hónappal",
+        "évvel"
     };
     int timeConversion[] = {
         1, 60, 60*60, 60*60*24, 60*60*24*7, 60*60*24*30, 60*60*24*365
@@ -224,9 +220,9 @@ void drawLoadMenu(int deltaTime) {
                     break;
 
             int elapsedSaveTime = deltaRealTime / timeConversion[timeStringsIndex];
-            Uint16 save[200];
-            swprintf(save, L"%d %ls ezelőtti mentés, %d ponttal", elapsedSaveTime, timeStrings[timeStringsIndex], points[i]);
-            unicodePrintCentered(save, 50, loadStart + k * loadTav, isMouseOverRect(50, loadStart + loadTav*k, 25, 3) ? smallBold : small);
+            char save[300];
+            snprintf(save, sizeof(save), "%d %s ezelőtti mentés, %d ponttal", elapsedSaveTime, timeStrings[timeStringsIndex], points[i]);
+            utf8PrintCentered(save, 50, loadStart + k * loadTav, isMouseOverRect(50, loadStart + loadTav*k, 25, 3) ? smallBold : small);
             unicodePrintCentered(L"Törlés", 50, loadStart + k * loadTav + 5, isMouseOverRect(50, loadStart + loadTav*k + 5, 25, 2) ? smallBold : small);
         k++;
         }
