@@ -59,25 +59,27 @@ void drawOptionsMenu(int deltaTime, int currentOptions[], bool click) {
         );
 
         filledCircleColor(screen, (float) screen -> w / 100 * (30 + 0.4 * 100 * (float)(currentOptions[i] - minOptions[i]) / (maxOptions[i] - minOptions[i])),
-            (float) screen -> h / 100 * (optionsStart + i * optionsTav), larger(4, 20 * screen -> h / designHeight), 0xFFFFFFFF
+            (float) screen -> h / 100 * (optionsStart + i * optionsTav), larger(4, (int)(20 * uiScale())), 0xFFFFFFFF
         );
         aacircleColor(screen, (float) screen -> w / 100 * (30 + 0.4 * 100 * (float)(currentOptions[i] - minOptions[i]) / (maxOptions[i] - minOptions[i])),
-           (float) screen -> h / 100 * (optionsStart + i * optionsTav), larger(4, 20 * screen -> h / designHeight), 0xFFFFFFFF
+           (float) screen -> h / 100 * (optionsStart + i * optionsTav), larger(4, (int)(20 * uiScale())), 0xFFFFFFFF
         );
 
         i++;
     }
 
-    if(click)
-        for(i = 0; i < 5; i++)
+    if(click) {
+        for(i = 0; i < 5; i++) {
             if(isMouseOverRect(50, optionsStart + optionsTav * i, 50, optionsTav / 2)) {
-            //Ezek nem magic számok, csak egy kicsit.
-            currentOptions[i] = minOptions[i] + (int)((maxOptions[i] - minOptions[i]) * (getMousePosition().x - screen -> w * 0.3) / (screen -> w * 0.4) );
-            putInsideInterval(minOptions[i], &currentOptions[i], maxOptions[i]);
+                //Ezek nem magic számok, csak egy kicsit.
+                currentOptions[i] = minOptions[i] + (int)((maxOptions[i] - minOptions[i]) * (getMousePosition().x - screen -> w * 0.3) / (screen -> w * 0.4) );
+                putInsideInterval(minOptions[i], &currentOptions[i], maxOptions[i]);
+            }
         }
+    }
 
-        printBack();
-        drawMenuParticles(deltaTime);
+    printBack();
+    drawMenuParticles(deltaTime);
 }
 
 ///A játék leírását rajzolja meg.

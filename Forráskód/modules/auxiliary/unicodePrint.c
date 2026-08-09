@@ -1,11 +1,23 @@
 #include "unicodePrint.h"
 
 
+/** \brief A feliratok és a felület méretezéséhez használt arányszám.
+ * A program az 1920x1080-as képernyőre készült, minden mérete ehhez képest értendő.
+ * Csak a magassághoz kötni viszont nem szabad: álló tájolású telefonon a képernyő magas,
+ * de keskeny, így a magasságból számolt betűk kilógnának a szélességből. A kisebbik
+ * képernyőoldalhoz igazítva a szöveg akkora lesz, amekkorára a fekvő képernyőn is, tehát
+ * a készülék elforgatása nem változtatja meg a méretét.
+ */
+float uiScale() {
+    if(screen == NULL) return 1;
+    return (float) smaller(screen -> w, screen -> h) / designHeight;
+}
+
 ///Indításnál betölti a szükséges betűtípusokat.
 void openFonts() {
     if(!TTF_WasInit()) TTF_Init();
 
-    float scale = (float) screen -> h / designHeight;
+    float scale = uiScale();
     fontSmaller = TTF_OpenFont("resources/Roboto-Thin.ttf", larger(1, (int)(40 * scale)));
     fontSmall = TTF_OpenFont("resources/Roboto-Thin.ttf", larger(1, (int)(48 * scale)));
     fontSmallBold = TTF_OpenFont("resources/Roboto-Light.ttf", larger(1, (int)(53 * scale)));

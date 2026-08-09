@@ -18,7 +18,7 @@
     void menuCamera(int* getColumns, int* getRows);
     int getColumns();
     bool cameraDollyZ(int deltaTime, bool restart);
-    intVector2D get2DPoint(vector3D point);
+    vector2D get2DPoint(vector3D point);
     void drawCuboid(renderObject object, bool sides[]);
     void drawMap(int deltaTime);
 

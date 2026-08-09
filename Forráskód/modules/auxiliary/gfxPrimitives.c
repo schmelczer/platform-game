@@ -197,7 +197,7 @@ int aacircleColor(SDL_Surface* dst, Sint16 x, Sint16 y, Sint16 rad, Uint32 color
     return 0;
 }
 
-int filledPolygonRGBA(SDL_Surface* dst, const Sint16* vx, const Sint16* vy, int n, Uint8 r, Uint8 g, Uint8 b, Uint8 a) {
+int filledPolygonRGBA(SDL_Surface* dst, const float* vx, const float* vy, int n, Uint8 r, Uint8 g, Uint8 b, Uint8 a) {
     if(n < 3) return -1;
 
     target t;
@@ -212,26 +212,32 @@ int filledPolygonRGBA(SDL_Surface* dst, const Sint16* vx, const Sint16* vy, int 
         if(crossings == NULL) { endTarget(&t); return -1; }
     }
 
-    int minY = vy[0], maxY = vy[0];
+    double minY = vy[0], maxY = vy[0];
     int i;
     for(i = 1; i < n; i++) {
         if(vy[i] < minY) minY = vy[i];
         if(vy[i] > maxY) maxY = vy[i];
     }
 
-    int yStart = minY < 0 ? 0 : minY;
-    int yEnd = maxY > t.h - 1 ? t.h - 1 : maxY;
+    //A vágás még a törtszámokon megtörténik, így a kerekítés biztosan nem lóg ki az int-ből
+    if(minY < 0) minY = 0;
+    if(maxY > t.h - 1) maxY = t.h - 1;
+    if(minY > maxY) { if(crossings != inlineCrossings) free(crossings); endTarget(&t); return 0; }
+
+    int yStart = (int) ceil(minY);
+    int yEnd = (int) floor(maxY);
 
     int y;
     for(y = yStart; y <= yEnd; y++) {
         int count = 0;
         for(i = 0; i < n; i++) {
             int j = (i + 1) % n;
-            int y1 = vy[i], y2 = vy[j], x1 = vx[i], x2 = vx[j];
-            if(y1 > y2) { int tmp = y1; y1 = y2; y2 = tmp; tmp = x1; x1 = x2; x2 = tmp; }
+            double y1 = vy[i], y2 = vy[j], x1 = vx[i], x2 = vx[j];
+            if(y1 > y2) { double tmp = y1; y1 = y2; y2 = tmp; tmp = x1; x1 = x2; x2 = tmp; }
 
-            if((y >= y1 && y < y2) || (y == maxY && y > y1 && y <= y2))
-                crossings[count++] = x1 + ((double) (y - y1) * (x2 - x1)) / (y2 - y1);
+            //Félig nyílt intervallum, hogy a két él közös csúcsát pontosan egyszer számoljuk
+            if(y >= y1 && y < y2)
+                crossings[count++] = x1 + ((y - y1) * (x2 - x1)) / (y2 - y1);
         }
 
         if(count < 2) continue;
@@ -244,8 +250,15 @@ int filledPolygonRGBA(SDL_Surface* dst, const Sint16* vx, const Sint16* vy, int 
             crossings[k + 1] = key;
         }
 
-        for(i = 0; i + 1 < count; i += 2)
-            blendHLine(&t, (int) floor(crossings[i] + 0.5), (int) floor(crossings[i + 1] + 0.5), y, r, g, b, a);
+        for(i = 0; i + 1 < count; i += 2) {
+            double left = crossings[i], right = crossings[i + 1];
+            if(left < 0) left = 0;
+            if(right > t.w - 1) right = t.w - 1;
+            if(left > right) continue;
+
+            int xa = (int) ceil(left), xb = (int) floor(right);
+            if(xa <= xb) blendHLine(&t, xa, xb, y, r, g, b, a);
+        }
     }
 
     if(crossings != inlineCrossings) free(crossings);
@@ -283,7 +296,7 @@ static void aaLine(const target* t, double x0, double y0, double x1, double y1, 
     }
 }
 
-int aapolygonRGBA(SDL_Surface* dst, const Sint16* vx, const Sint16* vy, int n, Uint8 r, Uint8 g, Uint8 b, Uint8 a) {
+int aapolygonRGBA(SDL_Surface* dst, const float* vx, const float* vy, int n, Uint8 r, Uint8 g, Uint8 b, Uint8 a) {
     if(n < 2) return -1;
 
     target t;

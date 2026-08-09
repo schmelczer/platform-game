@@ -155,26 +155,34 @@ bool cameraDollyZ(int deltaTime, bool restart) {
  * Ez interaktívan ábrázolva így néz ki: https://www.desmos.com/calculator/8qjvkptjmn
  * \param Térvektor típusú pont
  * \return Síkvektor típusú pont
- * A visszaadott pontnak int koordinátái vannak, hiszen valamelyik pixel koordinátáit jelöli.
+ * A visszaadott pont koordinátái törtszámok: egy pixelen belüli helyet is meg tudnak adni.
+ * Erre azért van szükség, mert a kamera folyamatosan mozog, és ha itt pixelre kerekítenénk,
+ * akkor a testek élei egymástól függetlenül, más-más képkockán ugranának át a szomszéd pixelre.
  * Ez a függvény igazából egy camera obscura modellje.
  */
-intVector2D get2DPoint(vector3D point) {
+vector2D get2DPoint(vector3D point) {
     //Ha watchBounds = true, csak egy megadott kockán belül adja vissza az értéket (rajzol), ez a feldarabolás miatt fontos
     if(watchBounds) {
         putInsideIntervalF(leftBound, &point.x, rightBound);
         putInsideIntervalF(lowerBound, &point.y, upperBound);
     }
 
-    //Ezt a két kifejezést újra felhasználjuk
+    /* A metszéspont képlete kibontva összevonható, hiszen zDistFromHole = zDist - focalLength:
+     *   (kamera * (zDist - f) + f * pont) / zDist - kamera  ==  f * (pont - kamera) / zDist
+     * A két alak matematikailag azonos, de a bal oldali a pálya közepén (kamera ~1000 m-nél)
+     * egy ~20000 nagyságrendű számból vonna ki majdnem ugyanakkorát, és a maradék néhány
+     * tizedből épp a lényeg veszne el: a float pontossága ott már csak ezred méter, amit a
+     * magnification több tized pixelnyi hibává nagyít. A jobb oldali alak előbb végzi el a
+     * kivonást (két közeli szám különbsége hibamentes), így a leképezés a pálya szélén is
+     * pixeltört pontos marad. */
     float zDist = point.z - cameraPosition.z;
-    float zDistFromHole = zDist - focalLength;
-    float dx = (cameraPosition.x * zDistFromHole + focalLength * point.x) / zDist - cameraPosition.x;
-    float dy = (cameraPosition.y * zDistFromHole + focalLength * point.y) / zDist - cameraPosition.y;
+    float dx = focalLength * (point.x - cameraPosition.x) / zDist;
+    float dy = focalLength * (point.y - cameraPosition.y) / zDist;
 
     //Megfelelően tükrözzük a kapot pontot, és a méterben kapott értéket átváltjuk pixelekre
-    intVector2D resultPoint = {
-        (int)(screen -> w / 2 - magnification * dx),
-        (int)(screen -> h / 2 + magnification * dy)
+    vector2D resultPoint = {
+        screen -> w / 2.0f - magnification * dx,
+        screen -> h / 2.0f + magnification * dy
     };
 
     return resultPoint;
@@ -190,9 +198,9 @@ intVector2D get2DPoint(vector3D point) {
  * Ezt egyszer kitöltéssel csinálja, egyszer pedig anti-aliasing poligonnal,
  * hogy a rajz széle ne legyen recegős.
  */
-static void drawTetragon(intVector2D a, intVector2D b, intVector2D c, intVector2D d, color color) {
-    Sint16 xCoords[4] = {(Sint16)a.x, (Sint16)b.x, (Sint16)c.x, (Sint16)d.x};
-    Sint16 yCoords[4] = {(Sint16)a.y, (Sint16)b.y, (Sint16)c.y, (Sint16)d.y};
+static void drawTetragon(vector2D a, vector2D b, vector2D c, vector2D d, color color) {
+    float xCoords[4] = {a.x, b.x, c.x, d.x};
+    float yCoords[4] = {a.y, b.y, c.y, d.y};
 
     filledPolygonRGBA(screen, xCoords, yCoords, 4, color.r, color.g, color.b, color.a);
         aapolygonRGBA(screen, xCoords, yCoords, 4, color.r, color.g, color.b, color.a);
@@ -206,7 +214,7 @@ static void drawTetragon(intVector2D a, intVector2D b, intVector2D c, intVector2
  * azokat se rajzolja le, amiket a helyzetük miatt biztosan nem láthat a kamera.
  */
 void drawCuboid(renderObject object, bool sides[]) {
-    intVector2D vertexes[8];
+    vector2D vertexes[8];
     //A téglatestet bejárva megkeressük a csúcsait
     int i;
     for(i = 0; i < 8; i++) {

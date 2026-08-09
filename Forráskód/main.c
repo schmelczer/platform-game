@@ -14,6 +14,7 @@
 #include "modules/map.h"
 #include "modules/menu/menuDraw.h"
 #include "modules/menu/menuFSM.h"
+#include "modules/touch.h"
 
 
 /**\mainpage Leírás
@@ -93,6 +94,7 @@ static void handleEvents() {
 
             case SDL_MOUSEBUTTONDOWN:
 
+                noteMouseInput();
                 if(event.button.button == SDL_BUTTON_LEFT) handleClicks(&prematureClick);
                 if(event.button.button == SDL_BUTTON_RIGHT) isRMBDown = true;
                 if(event.button.button == SDL_BUTTON_LEFT) isLMBDown = true;
@@ -106,6 +108,7 @@ static void handleEvents() {
 
             case SDL_MOUSEMOTION:
 
+                noteMouseInput();
                 setMousePosition(event.motion.x, event.motion.y);
                 break;
 
@@ -118,6 +121,13 @@ static void handleEvents() {
             case SDL_TEXTINPUT:
 
                 processTextInput(event.text.text);
+                break;
+
+            case SDL_FINGERDOWN:
+            case SDL_FINGERMOTION:
+            case SDL_FINGERUP:
+
+                handleFingerEvent(&event, &isLMBDown, &prematureClick);
                 break;
 
         }
@@ -144,10 +154,13 @@ static void frame() {
         setRenderingEnabled(isLastStep);
 
         if(isLastStep) SDL_FillRect(screen, NULL, backgroundColor);
-        doStuff(isLMBDown, isRMBDown, prematureClick);
+        applyTouchKeys();
+        doStuff(isLMBDown, isRMBDown || isTouchSlowMo(), prematureClick);
         hasDrawn = hasDrawn || isLastStep;
     }
     setRenderingEnabled(true);
+
+    syncSoftKeyboard(getGameState());
 
     if(hasDrawn) presentFrame();
 #ifdef __EMSCRIPTEN__
@@ -160,7 +173,12 @@ static void frame() {
 int main(int argc, char *argv[]) {
 
     srand(time(NULL));
+
+    //az érintéseket magunk dolgozzuk fel, az sdl egérré alakítása egyszerre csak egy ujjat tudna
+    SDL_SetHint(SDL_HINT_TOUCH_MOUSE_EVENTS, "0");
+
     openWindow();
+    initTouch();
     keys = (unsigned char*) SDL_GetKeyboardState(NULL);
     SDL_StartTextInput();
 

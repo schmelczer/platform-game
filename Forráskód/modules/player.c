@@ -63,13 +63,11 @@ void movePlayer(unsigned char* keys, int deltaTime) {
     //<\input feldolgozása>
     //<sebesség kiszámítása>
     if(directionOfMovement != 0) {
-        //billentyű lenyomás hatására elkezd gyorsulni
-        if(abs(playerVelocity.x) <  playerMaxVelocity.x) {
-            //hogy ne lehesen gyorsabb a max sebességénél
-            if(playerVelocity.x >  playerMaxVelocity.x)  playerVelocity.x =  playerMaxVelocity.x;
-            else if(playerVelocity.x < -playerMaxVelocity.x)  playerVelocity.x = - playerMaxVelocity.x;
-            playerVelocity.x +=  directionOfMovement * playerXAcceleration * deltaTime;
-        }
+        //billentyű lenyomás hatására elkezd gyorsulni, irányváltáskor pedig lefékez, majd megfordul
+        playerVelocity.x +=  directionOfMovement * playerXAcceleration * deltaTime;
+        //hogy ne lehesen gyorsabb a max sebességénél
+        if(playerVelocity.x >  playerMaxVelocity.x)  playerVelocity.x =  playerMaxVelocity.x;
+        else if(playerVelocity.x < -playerMaxVelocity.x)  playerVelocity.x = - playerMaxVelocity.x;
     }
     else {
     //lassulva megáll

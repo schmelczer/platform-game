@@ -1,4 +1,5 @@
 #include "menuFSM.h"
+#include "../touch.h"
 
 
 int currentOptions[] = {2000, 2000, 3, 450, 6000};
@@ -85,6 +86,14 @@ void handleClicks(bool* prematureClick) {
         case infoMenu:
             if(isMouseOverRect(50, menuStart + menuTav*5, 15, menuTav/2))
                 gameState = mainMenu;
+            break;
+
+        case nameInput:
+        case fading:
+        case initGame:
+        case initLoadedGame:
+        case quit:
+            //ezekben az állapotokban a kattintásnak nincs hatása
             break;
     }
 }
@@ -183,8 +192,16 @@ void doStuff(bool isLMBDown, bool isRMBDown, bool prematureClick) {
             snprintf(loseText, sizeof(loseText), "%s%s vesztett, a pontszáma %d.", typedName, cursorBlinking > 500 ? "|" : "", getPoints());
             utf8PrintCentered(loseText, 50, 50, small);
             break;
+
+        case quit:
+            //a kilépésről a main gondoskodik, itt már nincs mit rajzolni
+            break;
     }
-    if(isAlive()) drawMouse(isInSlowMo);
+    //érintéssel nincs kurzor, helyette a képernyőre rajzolt gombok látszanak
+    if(isAlive()) {
+        drawTouchControls();
+        if(shouldDrawCursor()) drawMouse(isInSlowMo);
+    }
 }
 
 ///A nameInputból returnnel és ESC-vel is ki lehet lépni, ezért kell ez a függvény rá, amit mindkét esetben meg lehet hívni.
@@ -236,6 +253,30 @@ void processTyping(SDL_Event event) {
         else if(key == SDLK_RETURN || key == SDLK_KP_ENTER) escapeFromNameInput();
         name[nameIndex] = 0;
     }
+}
+
+/** \brief A név teljes tartalmát cseréli le, a böngésző beviteli mezőjéhez.
+ * A mobilos billentyűzet nem karakterenként érkezik: a html mező mindig a teljes szövegét
+ * küldi el, mert így a törlés, a javítás és a szövegbeillesztés is magától jó lesz.
+ */
+void setNameInput(const char* utf8) {
+    if(gameState != nameInput) return;
+
+    wchar_t typed[sizeof(name) / sizeof(wchar_t)];
+    int count = utf8ToWide(utf8, typed, sizeof(typed) / sizeof(wchar_t));
+
+    nameIndex = 0;
+    int i;
+    for(i = 0; i < count; i++)
+        if(isValidChar(typed[i]) && nameIndex < (int) (sizeof(name) / sizeof(wchar_t)) - 1)
+            name[nameIndex++] = typed[i];
+
+    name[nameIndex] = 0;
+}
+
+///A böngésző beviteli mezőjének lezárása ugyanaz, mint az enter megnyomása.
+void submitNameInput() {
+    escapeFromNameInput();
 }
 
 ///A beírt karaktereket utf-8-ból átalakítva fűzi a névhez.

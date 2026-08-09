@@ -73,9 +73,9 @@ void createProjectile(vector3D playerPosition, vector3D playerSize, vector2D* pl
     newProjectile -> position.y = playerPosition.y + playerSize.y / 2;
     newProjectile -> size = projectileSize;
 
-    intVector2D playerCoord = get2DPoint((vector3D) {newProjectile -> position.x, newProjectile -> position.y, 0});
-    int deltaX = mouse.x - playerCoord.x;
-    int deltaY = playerCoord.y - mouse.y;
+    vector2D playerCoord = get2DPoint((vector3D) {newProjectile -> position.x, newProjectile -> position.y, 0});
+    float deltaX = mouse.x - playerCoord.x;
+    float deltaY = playerCoord.y - mouse.y;
     float distance = sqrt(deltaX * deltaX + deltaY * deltaY);
     float compensation = 0;
     if(distance > 0) compensation = projectileVelocity / distance;

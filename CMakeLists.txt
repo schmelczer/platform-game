@@ -30,6 +30,7 @@ if(EMSCRIPTEN)
         "SHELL:-sALLOW_MEMORY_GROWTH=1"
         "SHELL:-sEXIT_RUNTIME=0"
         "SHELL:-sFORCE_FILESYSTEM=1"
+        "SHELL:-sEXPORTED_RUNTIME_METHODS=ccall"
         "SHELL:-lidbfs.js"
         "SHELL:--preload-file ${GAME_SRC}/resources@/resources"
         "SHELL:--shell-file ${GAME_WEB_SHELL}"

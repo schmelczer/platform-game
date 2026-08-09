@@ -18,5 +18,7 @@
     void whatToDoOnEscape();
     void processTyping(SDL_Event event);
     void processTextInput(const char* utf8);
+    void setNameInput(const char* utf8);
+    void submitNameInput();
 
 #endif // MENUFSM_H_INCLUDED

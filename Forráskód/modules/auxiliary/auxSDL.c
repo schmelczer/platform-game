@@ -99,10 +99,12 @@ void handleResize() {
 
     if(screen != NULL && screen -> w == outputWidth && screen -> h == outputHeight) return;
 
-    bool heightChanged = screen == NULL || screen -> h != outputHeight;
+    //a betűméret a kisebbik képernyőoldalhoz igazodik, csak annak változásakor kell újratölteni
+    bool scaleChanged = screen == NULL ||
+        smaller(screen -> w, screen -> h) != smaller(outputWidth, outputHeight);
     createDrawingSurface(outputWidth, outputHeight);
 
-    if(heightChanged) {
+    if(scaleChanged) {
         freeFonts();
         openFonts();
     }
@@ -218,7 +220,7 @@ mousePos getMousePosition() {
 
 ///Lerajzolja a képernyőre az egeret, erre azért van szükség, mert az SDL csak fekete-fehér egérmutatót kezel.
 void drawMouse(bool isBW) {
-    Sint16 size = larger(4, mouseSize * screen -> h / designHeight);
+    Sint16 size = larger(4, (int)(mouseSize * uiScale()));
     Sint16 x1 = mouse.x - size / 2;
     Sint16 x2 = mouse.x + size / 2;
     Sint16 y1 = mouse.y - size / 2;

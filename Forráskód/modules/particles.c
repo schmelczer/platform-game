@@ -4,6 +4,9 @@
 #define particleSizeVariance 0.05       /**< Az eső részecskék (~hó) méretének átlagostól való eltérése [m]. */
 #define particleBaseVelocity 0.0025      /**< Az eső részecskék (~hó) átlagos sebessége [m/ms]. */
 #define particleVelocityVariance 0.0010 /**< Az eső részecskék (~hó) sebességének átlagostól való eltérése [m/ms]. */
+#define particleMinDistance 5           /**< Ennél közelebb a kamerához egy részecske sem kerülhet [m]. */
+#define particleMinZ 1.0                /**< A pályához legközelebbi részecskesík, a kockák előlapja z = 1-nél van [m]. */
+#define particleMaxZ (cameraDeltaZDistanceEnd - particleMinDistance) /**< A kamerához legközelebbi részecskesík [m]. */
 #define particleColor (colors) { (color) {220, 220, 220, 255}, (color){220, 220, 220, 255}, (color) {220, 220, 220, 255} } /**< A részecskék színe. */
 
 int particleMultiplier;                 /**< Egy oszlopban hány részecske van? */
@@ -15,10 +18,16 @@ void setParticleMultiplier(int a, bool isMenu) {
     particleMultiplier = isMenu ? a : getMapSize().y * a / 100;
 }
 
-///A makrókban beállított paraméterek alapján hoz létre egy részecskét, a pálya és a kamera közti z koorddal.
+/** \brief A makrókban beállított paraméterek alapján hoz létre egy részecskét, a pálya és a kamera közti z koorddal.
+ * A z koordot nem a teljes [pálya, kamera] szakaszról sorsoljuk: a kamera modellje szerint egy test látszólagos
+ * mérete a lencsétől mért távolságával fordítottan arányos, így a lencse elé kerülő részecske nem hópehelynek,
+ * hanem a képernyőn átsuhanó fehér csíknak látszana. A kamera legközelebbi állása (a dolly vége) a
+ * cameraDeltaZDistanceEnd, ezért ehhez képest hagyunk particleMinDistance ráhagyást.
+ */
 particle createRandomParticle(int baseY, bool isYRand) {
     return (particle) {
-        (vector2D) {isYRand ? rand() % (baseY-1) : baseY, (float) (rand() % (cameraDeltaZDistanceEnd - 1) + 1)},
+        (vector2D) {isYRand ? rand() % (baseY-1) : baseY,
+                    randomWithinBorders((particleMaxZ + particleMinZ) / 2, (particleMaxZ - particleMinZ) / 2)},
         randomWithinBorders(particleBaseSize, particleSizeVariance),
         randomWithinBorders(particleBaseVelocity, particleVelocityVariance)
     };

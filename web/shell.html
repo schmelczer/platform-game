@@ -2,7 +2,7 @@
 <html lang="hu">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <title>Platform játék</title>
 <style>
     html, body {
@@ -12,6 +12,15 @@
         color: #e8d5d5;
         font: 16px/1.5 system-ui, sans-serif;
         overflow: hidden;
+        overscroll-behavior: none;
+    }
+
+    #shell, canvas {
+        touch-action: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
     }
 
     #shell {
@@ -27,33 +36,23 @@
         background: #280000;
         outline: none;
     }
-
-    #status {
-        position: fixed;
-        bottom: 12px;
-        font-size: 14px;
-        opacity: 0.65;
-    }
 </style>
 </head>
 <body>
 <div id="shell">
     <canvas id="canvas" tabindex="-1" oncontextmenu="event.preventDefault()"></canvas>
 </div>
-<div id="status">Betöltés…</div>
 <script>
-    var statusElement = document.getElementById('status');
     var canvasElement = document.getElementById('canvas');
 
     var Module = {
         canvas: canvasElement,
         preRun: [],
-        postRun: [],
+        postRun: [function () {
+            canvasElement.focus();
+        }],
         print: function (text) { console.log(text); },
-        printErr: function (text) { console.error(text); },
-        setStatus: function (text) {
-            if (text) statusElement.textContent = text;
-        }
+        printErr: function (text) { console.error(text); }
     };
 
     canvasElement.addEventListener('click', function () { canvasElement.focus(); });

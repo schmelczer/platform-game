@@ -7,6 +7,7 @@
         tiny, small, smallBold, large
     } fontType;
 
+    float uiScale();
     void openFonts();
     void freeFonts();
     bool isValidChar(wchar_t chr);
