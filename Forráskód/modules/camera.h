@@ -17,6 +17,7 @@
     void followPlayerWithCamera();
     void menuCamera(int* getColumns, int* getRows);
     int getColumns();
+    int getRows();
     bool cameraDollyZ(int deltaTime, bool restart);
     vector2D get2DPoint(vector3D point);
     void drawCuboid(renderObject object, bool sides[]);

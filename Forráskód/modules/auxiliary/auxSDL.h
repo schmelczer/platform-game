@@ -16,6 +16,21 @@
      */
     #define maxDevicePixelRatio 1.0
 
+    /** \brief Mobilon ennél is elmehetünk, mert ott a vászon css-ben is kicsi.
+     * Egy telefon képernyője css-pixelben nagyjából ötöde egy asztali ablakénak, így a
+     * kétszeres arány még mindig kevesebb rajzolandó pixelt jelent, mint amennyivel a
+     * gépen számolunk. Cserébe a kicsi, sűrű kijelzőn ez látszik meg a legjobban.
+     */
+    #define maxMobileDevicePixelRatio 2.0
+
+    /** \brief Eddig a css-pixelben mért rövidebb képernyőoldalig tekintünk egy eszközt mobilnak.
+     * A mutatóeszköz mellé azért kell a méret is, mert egy nagy, ujjal kezelt panel (például
+     * egy kihelyezett érintőképernyő) is az ujjat mondja fő mutatóeszköznek, a duplázás
+     * viszont ott már ugyanolyan drága lenne, mint az asztali gépen. A határ a legnagyobb
+     * kézbe fogható eszköz rövidebb oldala: efölött már nem telefonról vagy táblagépről van szó.
+     */
+    #define mobileScreenLimit 1024
+
     typedef struct mousePos {
         Uint16 x, y;
     } mousePos;

@@ -4,9 +4,11 @@
 ///A menüben lévő havazást kezeli, sokkal olcsóbb, mintha egy mapDrawt hívnánk.
 static void drawMenuParticles(int deltaTime) {
     int columns = getColumns();
+    //álló képernyőn több sor látszik, mint oszlop, ezért a felső határ a sorok száma
+    int rows = getRows();
     int i;
     for(i = 0; i < columns; i++)
-        drawParticles(i, 0, columns, deltaTime);
+        drawParticles(i, 0, rows, deltaTime);
 }
 
 ///A főmenüt rajzolja.

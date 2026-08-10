@@ -2,6 +2,7 @@
 #include "../camera.h"
 
 #ifdef __EMSCRIPTEN__
+    #include <emscripten.h>
     #include <emscripten/html5.h>
 #else
     #include <unistd.h>
@@ -15,10 +16,28 @@ static SDL_Texture* frameTexture;
 static int textureWidth, textureHeight;
 
 #ifdef __EMSCRIPTEN__
+/** \brief Kicsi, elsősorban ujjal kezelt kijelzőn futunk-e?
+ * Nem ugyanaz a kérdés, mint a touch.c-beli: ott bármilyen érintés elég, itt viszont az
+ * kell, hogy a fő mutatóeszköz legyen az ujj. Egy érintőképernyős laptop egeret és ujjat
+ * is ismer, a képernyője viszont akkora, hogy a duplázott felbontást nem bírná el.
+ * Mindkettő a kijelző tulajdonsága, futás közben nem változik, elég egyszer megkérdezni.
+ */
+static bool isMobileScreen() {
+    static int cached = -1;
+
+    if(cached < 0) cached = EM_ASM_INT({
+        return matchMedia('(pointer: coarse)').matches &&
+            Math.min(screen.width, screen.height) <= $0 ? 1 : 0;
+    }, mobileScreenLimit);
+
+    return cached == 1;
+}
+
 ///A böngésző pixelarányát adja vissza, a szoftveres rajzolás miatt megszabott plafonig.
 static double drawingPixelRatio() {
     double ratio = emscripten_get_device_pixel_ratio();
-    return ratio > maxDevicePixelRatio ? maxDevicePixelRatio : ratio;
+    double maxRatio = isMobileScreen() ? maxMobileDevicePixelRatio : maxDevicePixelRatio;
+    return ratio > maxRatio ? maxRatio : ratio;
 }
 #endif
 

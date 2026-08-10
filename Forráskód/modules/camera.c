@@ -55,10 +55,18 @@ static void initRenderMap() {
  *
  */
 static void calculateRowsAndColumns() {
-    magnification = (float) screen -> w / 2 / sensorSize;
-    columns = 2 * cameraPosition.z * sensorSize / focalLength;
+    /* A szenzor hosszabb oldala mindig a képernyő hosszabb oldalára képződik le. Fekvő
+     * képernyőn ez a szélesség, állón viszont a magasság: egy telefon képernyőjén a
+     * szélességhez igazodva a pályának majdnem a kétszerese férne ki függőlegesen, amitől
+     * a kockák aprók lennének, a játékos feje fölött pedig végtelen üres ég maradna.
+     * Így viszont fekvőn és állón is ugyanakkorák a kockák, csak más alakú részt látunk. */
+    float longerScreenSide = larger(screen -> w, screen -> h);
+    magnification = longerScreenSide / 2 / sensorSize;
+
+    float longerSideInMeters = 2 * cameraPosition.z * sensorSize / focalLength;
     //hogy a négyzet négyzet is maradjon
-    rows = (float)screen -> h / screen -> w * columns;
+    columns = screen -> w / longerScreenSide * longerSideInMeters;
+    rows = screen -> h / longerScreenSide * longerSideInMeters;
 
     if(renderMap == NULL) initRenderMap();
 
@@ -115,6 +123,11 @@ void menuCamera(int* getColumns, int* getRows) {
 ///Visszaadja, hogy hány oszlop látszik a pályából.
 int getColumns() {
     return columns;
+}
+
+///Visszaadja, hogy hány sor látszik a pályából.
+int getRows() {
+    return rows;
 }
 
 /** \brief A kamera dollyzását végzi, a kamerát mozgatja
