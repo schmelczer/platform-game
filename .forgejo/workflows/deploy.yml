@@ -2,15 +2,11 @@ name: Build & deploy web version
 
 on:
   push:
-    branches: ['main']
-  pull_request:
-    branches: ['main']
   workflow_dispatch:
 jobs:
   deploy:
     name: Build WebAssembly & deploy
-    runs-on: ${{ (github.actor == 'renovate-bot' || github.event.pull_request.user.login == 'renovate-bot' || startsWith(github.ref, 'refs/heads/renovate/') || startsWith(github.head_ref,
-      'renovate/')) && 'renovate' || 'docker' }}
+    runs-on: docker
 
     env:
       # Keep in sync with the version table in README.md.
@@ -18,7 +14,6 @@ jobs:
 
     steps:
       - uses: https://github.com/actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-
         with:
           persist-credentials: false
       - name: Install cmake & friends
@@ -30,7 +25,6 @@ jobs:
           $SUDO apt-get install -y --no-install-recommends \
             ca-certificates cmake git ninja-build python3 xz-utils
           cmake --version
-
       - name: Install Emscripten
         run: |
           set -eo pipefail
@@ -47,27 +41,21 @@ jobs:
             echo "EM_CONFIG=${EM_CONFIG:-$EMSDK/.emscripten}"
             echo "PATH=$PATH"
           } >> "$GITHUB_ENV"
-
       - name: Configure
         run: emcmake cmake -S . -B build-web -G Ninja -DCMAKE_BUILD_TYPE=Release
-
       - name: Build
         run: cmake --build build-web
-
       - name: Check the expected files were produced
         run: |
           set -euo pipefail
           for file in index.html index.js index.wasm index.data; do
             test -s "build-web/web/$file" || { echo "hiányzik: $file"; exit 1; }
           done
-
       - name: Upload static site artifact 1
-        if: ${{ (github.event_name == 'push' && github.ref == 'refs/heads/main') }}
+        if: ${{ github.ref == 'refs/heads/main' }}
         uses: https://github.com/actions/upload-artifact@ff15f0306b3f739f7b6fd43fb5d26cd321bd4de5
         with:
           name: pages-deploy-0
           path: build-web/web
           if-no-files-found: error
           retention-days: 1
-    if: ${{ contains(fromJSON('["andras","ruby336688","renovate-bot"]'), github.actor) && (!github.event.pull_request || contains(fromJSON('["andras","ruby336688","renovate-bot"]'),
-      github.event.pull_request.user.login)) }}
